@@ -1,0 +1,142 @@
+@charset "utf-8";* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial,pingfang sc,SimHei,SimSun;
+    box-sizing: border-box;
+    font-size: 14px
+}
+
+body {
+    background-color: #f5f6fa
+}
+
+img {
+    border: none
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.kongs,.kongs:hover {
+    height: 0!important;
+    margin: 0!important;
+    padding: 0!important;
+    border: none!important;
+    background-color: transparent!important;
+    box-shadow: none!important
+}
+
+.site-main {
+    width: 100%;
+    margin-top: 30px
+}
+
+.site-main .site-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: center;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 15px
+}
+
+.site-main .site-name i {
+    display: block;
+    font-size: 20px;
+    margin-right: 8px
+}
+
+.site-main .site-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+}
+
+.site-main .site-list .list {
+    width: 16%;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: .3s all;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start
+}
+
+.site-main .site-list .list a {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 5%
+}
+
+.site-main .site-list .list p.name {
+    color: #666;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 44px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    padding-left: 25px
+}
+
+.site-main .site-list .list p.name img {
+    width: 18px;
+    height: 18px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0
+}
+
+.site-main .site-list .list .desc {
+    display: block;
+    width: 100%;
+    font-size: 13px;
+    padding-bottom: 10px;
+    color: #666;
+    line-height: 1.5
+}
+
+.site-main .site-list .list:hover {
+    box-shadow: 0 0 6px #333;
+    background-color: #64a15e;
+    transition: .3s all
+}
+
+.site-main .site-list .list:hover p.name,.site-main .site-list .list:hover p.desc {
+    color: #fff
+}
+
+.site-main .site-list .list.visible {
+    display: flex
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .site-main .site-name {
+        margin-bottom: 10px
+    }
+
+    .site-main .site-list .list {
+        width: 48%;
+        margin-bottom: 10px
+    }
+
+    .site-main .site-list {
+        margin-bottom: 25px
+    }
+
+    .site-main .site-list .list a {
+        padding: 0 10% 0 5%
+    }
+}
