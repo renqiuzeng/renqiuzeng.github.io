@@ -27,10 +27,15 @@ a {
     background-color: transparent!important;
     box-shadow: none!important
 }
+.sn {
+    width: 15%;
+}
+
 
 .site-main {
-    width: 100%;
-    margin-top: 30px
+    width: 70%;
+    margin-top: 30px;
+    margin-top: 15%;
 }
 
 .site-main .site-name {
@@ -121,7 +126,7 @@ a {
     display: flex
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1100px) {
 
     .site-main .site-name {
         margin-bottom: 10px
