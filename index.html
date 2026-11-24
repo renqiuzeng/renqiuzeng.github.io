@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,3 +38,1279 @@
 </div>
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="主流电脑软件官方网站导航，收录 Windows / macOS / Linux 常用软件的官方主页，支持即时搜索与分类筛选。">
+<title>软件官网导航 · 电脑软件官方网址合集</title>
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#f4f6fa;
+    --card:#ffffff;
+    --text:#15181e;
+    --muted:#616a7a;
+    --border:#e2e6ee;
+    --border-strong:#cfd6e3;
+    --accent:#2f6bff;
+    --accent-soft:#e9f0ff;
+    --mark:#ffe98a;
+    --mark-text:#2a2200;
+    --header:rgba(244,246,250,.78);
+    --side-bg:#eceff5;
+    --side-hover:rgba(16,24,40,.055);
+    --shadow:0 1px 2px rgba(16,24,40,.05), 0 10px 26px -16px rgba(16,24,40,.35);
+    --shadow-hover:0 2px 4px rgba(16,24,40,.06), 0 18px 34px -18px rgba(16,24,40,.42);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Consolas,"Liberation Mono",Menlo,monospace;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0c0e13;
+      --card:#151922;
+      --text:#e9ecf3;
+      --muted:#95a0b4;
+      --border:#232936;
+      --border-strong:#313a4c;
+      --accent:#7ba5ff;
+      --accent-soft:#18233b;
+      --mark:#6b5500;
+      --mark-text:#fff6cc;
+      --header:rgba(12,14,19,.76);
+      --side-bg:#101420;
+      --side-hover:rgba(255,255,255,.07);
+      --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,.8);
+      --shadow-hover:0 2px 6px rgba(0,0,0,.5), 0 20px 38px -20px rgba(0,0,0,.9);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0c0e13;
+    --card:#151922;
+    --text:#e9ecf3;
+    --muted:#95a0b4;
+    --border:#232936;
+    --border-strong:#313a4c;
+    --accent:#7ba5ff;
+    --accent-soft:#18233b;
+    --mark:#6b5500;
+    --mark-text:#fff6cc;
+    --header:rgba(12,14,19,.76);
+    --side-bg:#101420;
+    --side-hover:rgba(255,255,255,.07);
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 28px -18px rgba(0,0,0,.8);
+    --shadow-hover:0 2px 6px rgba(0,0,0,.5), 0 20px 38px -20px rgba(0,0,0,.9);
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif;
+    font-size:15px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--accent-soft)}
+
+  .topbar{
+    position:sticky;top:0;z-index:20;
+    background:var(--header);
+    backdrop-filter:saturate(160%) blur(12px);
+    -webkit-backdrop-filter:saturate(160%) blur(12px);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{
+    max-width:1240px;margin:0 auto;padding:14px 20px;
+    display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;min-width:0}
+  .logo{
+    width:32px;height:32px;border-radius:9px;flex:none;
+    display:grid;place-items:center;
+    background:linear-gradient(140deg,#3b7bff,#7a4dff);
+    color:#fff;font-weight:800;font-size:13px;letter-spacing:.5px;
+    box-shadow:0 4px 12px -4px rgba(59,123,255,.65);
+  }
+  .brand h1{font-size:16.5px;margin:0;letter-spacing:.2px;white-space:nowrap}
+  .brand .sub{font-size:12px;color:var(--muted);white-space:nowrap;display:none}
+  @media (min-width:900px){.brand .sub{display:block}}
+
+  .search-wrap{position:relative;flex:1 1 320px;max-width:520px;margin-left:auto}
+  .search-box{
+    display:flex;align-items:center;gap:8px;
+    height:42px;padding:0 10px 0 12px;
+    background:var(--card);
+    border:1px solid var(--border-strong);
+    border-radius:12px;
+    transition:border-color .15s, box-shadow .15s;
+  }
+  .search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .search-box svg{flex:none;color:var(--muted)}
+  #q{
+    flex:1 1 auto;min-width:0;height:100%;
+    border:0;outline:0;background:transparent;color:var(--text);
+    font:inherit;font-size:14.5px;
+  }
+  #q::placeholder{color:var(--muted)}
+  .kbd{
+    flex:none;font-family:var(--mono);font-size:11px;color:var(--muted);
+    border:1px solid var(--border-strong);border-bottom-width:2px;border-radius:6px;
+    padding:1px 5px;background:var(--bg);
+  }
+  @media (max-width:640px){.kbd{display:none}}
+  #clearBtn{
+    flex:none;border:0;background:transparent;color:var(--muted);cursor:pointer;
+    font-size:16px;line-height:1;padding:4px 2px;border-radius:6px;
+  }
+  #clearBtn:hover{color:var(--text)}
+  #clearBtn[hidden]{display:none}
+
+  .theme-btn{
+    flex:none;width:42px;height:42px;border-radius:12px;cursor:pointer;
+    background:var(--card);border:1px solid var(--border-strong);color:var(--text);
+    display:grid;place-items:center;transition:border-color .15s,transform .15s;
+  }
+  .theme-btn:hover{border-color:var(--accent);transform:translateY(-1px)}
+  .theme-btn:active{transform:translateY(0)}
+
+  main{
+    max-width:1240px;margin:0 auto;padding:0 20px 40px;
+    display:grid;grid-template-columns:228px minmax(0,1fr);
+    gap:26px;align-items:start;
+  }
+  .content{min-width:0}
+  .hero{padding:22px 2px 4px}
+  .hero h2{margin:0 0 6px;font-size:26px;line-height:1.25;letter-spacing:-.4px}
+  .hero p{margin:0;color:var(--muted);font-size:13.5px;max-width:780px}
+  .hero p strong{color:var(--text);font-weight:600}
+
+  .meta{
+    display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+    padding:14px 2px 0;font-size:12.5px;color:var(--muted);
+  }
+  .dot{width:4px;height:4px;border-radius:50%;background:var(--border-strong)}
+  #resultInfo{font-variant-numeric:tabular-nums}
+
+  /* 左侧分类导航 */
+  .sidebar{
+    position:sticky;top:78px;
+    max-height:calc(100vh - 96px);
+    margin-top:22px;
+    padding:12px 10px 10px;
+    background:var(--side-bg);
+    border:1px solid var(--border);
+    border-radius:14px;
+    overflow-y:auto;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    scrollbar-color:var(--border-strong) transparent;
+  }
+  .sidebar::-webkit-scrollbar{width:8px}
+  .sidebar::-webkit-scrollbar-thumb{background:var(--border-strong);border-radius:8px}
+  .sidebar::-webkit-scrollbar-track{background:transparent}
+  .side-title{
+    padding:4px 10px 9px;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--muted);
+  }
+  .side-nav{display:flex;flex-direction:column;gap:2px}
+  .side-item{
+    position:relative;display:flex;align-items:center;gap:9px;
+    width:100%;padding:8px 10px;border:0;border-radius:9px;
+    background:transparent;color:var(--muted);
+    font:inherit;font-size:13px;line-height:1.45;text-align:left;cursor:pointer;
+    transition:background .14s,color .14s;
+  }
+  .side-item:hover{background:var(--side-hover);color:var(--text)}
+  .side-item[aria-current="true"]{
+    background:var(--accent-soft);color:var(--accent);font-weight:650;
+  }
+  .side-item[aria-current="true"]::before{
+    content:"";position:absolute;left:0;top:8px;bottom:8px;width:3px;
+    border-radius:0 3px 3px 0;background:var(--accent);
+  }
+  .side-item .ico{flex:none;width:17px;text-align:center;font-size:13px}
+  .side-item .label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .side-item .cnt{
+    margin-left:auto;flex:none;font-family:var(--mono);font-size:10.5px;
+    padding:1px 6px;border-radius:999px;
+    background:var(--card);border:1px solid var(--border);color:var(--muted);
+  }
+  .side-item[aria-current="true"] .cnt{background:var(--accent);border-color:var(--accent);color:#fff}
+  .side-item.is-zero{opacity:.42}
+  .side-foot{
+    margin-top:8px;padding:10px 10px 2px;border-top:1px solid var(--border);
+    font-family:var(--mono);font-size:11px;color:var(--muted);
+  }
+
+  @media (max-width:900px){
+    main{display:block;padding:0 14px 32px}
+    .sidebar{
+      position:static;max-height:none;margin:12px 0 0;
+      padding:8px;border-radius:12px;overflow:visible;
+    }
+    .side-title,.side-foot{display:none}
+    .side-nav{
+      flex-direction:row;gap:6px;padding:2px;
+      overflow-x:auto;overflow-y:hidden;scrollbar-width:none;
+    }
+    .side-nav::-webkit-scrollbar{display:none}
+    .side-item{
+      flex:0 0 auto;width:auto;padding:6px 11px;border-radius:999px;
+      border:1px solid var(--border);background:var(--card);font-size:12.5px;
+    }
+    .side-item[aria-current="true"]{border-color:var(--accent)}
+    .side-item[aria-current="true"]::before{display:none}
+  }
+
+  .grid-section{margin-top:22px}
+  .sec-head{display:flex;align-items:center;gap:8px;margin:0 0 12px;padding:0 2px}
+  .sec-head .emoji{font-size:15px}
+  .sec-head h3{margin:0;font-size:13.5px;font-weight:650;letter-spacing:.2px}
+  .sec-head .line{flex:1 1 auto;height:1px;background:var(--border)}
+  .sec-head .num{font-family:var(--mono);font-size:11px;color:var(--muted)}
+
+  .grid{
+    display:grid;gap:12px;
+    grid-template-columns:repeat(auto-fill,minmax(268px,1fr));
+  }
+  @media (max-width:600px){
+    .grid{grid-template-columns:1fr}
+    main{padding:0 14px 32px}
+    .topbar-inner{padding:12px 14px;gap:10px}
+    .hero h2{font-size:21px}
+    .hero{padding-top:18px}
+    .search-wrap{flex:1 1 100%;max-width:none;order:3;margin-left:0}
+  }
+
+  .card{
+    display:flex;flex-direction:column;gap:10px;
+    padding:14px 14px 12px;
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:14px;
+    box-shadow:var(--shadow);
+    transition:transform .16s ease, box-shadow .16s ease, border-color .16s ease;
+    position:relative;overflow:hidden;
+  }
+  .card::after{
+    content:"";position:absolute;inset:0;border-radius:14px;
+    border:1px solid transparent;pointer-events:none;
+    transition:border-color .16s;
+  }
+  .card:hover,.card:focus-visible{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-hover);
+    outline:none;
+  }
+  .card:hover::after,.card:focus-visible::after{border-color:var(--accent)}
+  .card:active{transform:translateY(-1px)}
+
+  .card-top{display:flex;align-items:flex-start;gap:10px}
+  .mono-mark{
+    flex:none;width:36px;height:36px;border-radius:10px;
+    display:grid;place-items:center;
+    font-weight:750;font-size:15px;font-family:var(--mono);
+    background:hsl(var(--h) 78% 94%);
+    color:hsl(var(--h) 55% 34%);
+    border:1px solid hsl(var(--h) 60% 88%);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .mono-mark{
+      background:hsl(var(--h) 45% 20%);
+      color:hsl(var(--h) 75% 76%);
+      border-color:hsl(var(--h) 35% 30%);
+    }
+  }
+  :root[data-theme="dark"] .mono-mark{
+    background:hsl(var(--h) 45% 20%);
+    color:hsl(var(--h) 75% 76%);
+    border-color:hsl(var(--h) 35% 30%);
+  }
+
+  .names{min-width:0;flex:1 1 auto}
+  .names h4{
+    margin:0;font-size:14.5px;font-weight:650;letter-spacing:.1px;
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .names .en{
+    display:block;margin-top:1px;font-size:11.5px;color:var(--muted);
+    white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .arrow{
+    flex:none;color:var(--muted);font-size:13px;opacity:0;
+    transform:translate(-2px,2px);transition:opacity .16s,transform .16s;
+  }
+  .card:hover .arrow{opacity:1;transform:translate(0,0);color:var(--accent)}
+
+  .desc{
+    margin:0;font-size:12.8px;line-height:1.55;color:var(--muted);
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+    overflow:hidden;min-height:40px;
+  }
+  .card-foot{
+    display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+    padding-top:8px;border-top:1px dashed var(--border);
+    margin-top:auto;
+  }
+  .plat{
+    font-family:var(--mono);font-size:10px;letter-spacing:.3px;
+    padding:1px 5px;border-radius:5px;
+    color:var(--muted);background:var(--bg);
+    border:1px solid var(--border);
+  }
+  .dom{
+    margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--muted);
+    max-width:140px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .note{
+    font-size:10px;color:#b45309;
+    background:#fef3c7;border:1px solid #fcd34d;
+    padding:1px 5px;border-radius:5px;white-space:nowrap;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]) .note{background:#3a2a08;border-color:#6b4d0d;color:#fbbf24}
+  }
+  :root[data-theme="dark"] .note{background:#3a2a08;border-color:#6b4d0d;color:#fbbf24}
+
+  mark{
+    background:var(--mark);color:var(--mark-text);
+    border-radius:3px;padding:0 1px;font-weight:600;
+  }
+
+  #empty{display:none;text-align:center;padding:64px 20px 40px;color:var(--muted)}
+  #empty.show{display:block}
+  #empty .big{font-size:38px;line-height:1;margin-bottom:12px;opacity:.85}
+  #empty h5{margin:0 0 6px;color:var(--text);font-size:15px;font-weight:650}
+  #empty p{margin:0 0 16px;font-size:13px}
+  #empty button{
+    font:inherit;font-size:13px;cursor:pointer;
+    padding:7px 16px;border-radius:9px;
+    border:1px solid var(--border-strong);background:var(--card);color:var(--text);
+  }
+  #empty button:hover{border-color:var(--accent);color:var(--accent)}
+
+  footer{border-top:1px solid var(--border);margin-top:18px;color:var(--muted);font-size:12px}
+  .foot-inner{
+    max-width:1240px;margin:0 auto;padding:18px 20px 34px;
+    display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:space-between;
+  }
+  .foot-inner span{line-height:1.7}
+  .kbd-note{font-family:var(--mono)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="logo">SW</span>
+      <h1>软件官网导航</h1>
+      <span class="sub">只收录官方站点</span>
+    </div>
+
+    <div class="search-wrap">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.6-3.6"></path>
+        </svg>
+        <input id="q" type="text" inputmode="search" autocomplete="off" spellcheck="false"
+               placeholder="搜索软件名、简介、分类或域名…" aria-label="搜索软件">
+        <span class="kbd" id="kbdHint">Ctrl K</span>
+        <button id="clearBtn" type="button" title="清空搜索（Esc）" aria-label="清空搜索" hidden>✕</button>
+      </div>
+    </div>
+
+    <button class="theme-btn" id="themeBtn" type="button" title="切换主题（跟随系统 / 浅色 / 深色）" aria-label="切换主题"></button>
+  </div>
+</header>
+
+<main>
+  <aside class="sidebar">
+    <div class="side-title">分类导航</div>
+    <nav class="side-nav" id="chips" aria-label="分类筛选"></nav>
+    <div class="side-foot" id="sideFoot"></div>
+  </aside>
+
+  <div class="content">
+    <div class="hero">
+      <h2>常用电脑软件，直达官方网站（收录 <strong id="heroCount">0</strong> 款）</h2>
+    </div>
+
+    <div class="meta">
+      <span id="resultInfo">共 0 款</span>
+      <span class="dot"></span>
+      <span>点击卡片即在新标签页打开官网</span>
+      <span class="dot"></span>
+      <span>校对于 2026-10-31</span>
+    </div>
+
+    <section id="grid" aria-live="polite"></section>
+
+    <div id="empty">
+      <div class="big">🔍</div>
+      <h5>没有找到匹配的软件</h5>
+      <p>换个关键词试试，例如「浏览器」「剪辑」「Adobe」，或清除分类筛选。</p>
+      <button type="button" id="resetBtn">清空搜索与筛选</button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>说明：本页仅做官方网址索引，软件版权归各厂商所有；链接均为厂商官网，不含推广与下载站。</span>
+    <span>快捷键：<span class="kbd-note">Ctrl / ⌘ + K</span> 聚焦搜索 · <span class="kbd-note">Esc</span> 清空</span>
+  </div>
+</footer>
+
+<script>
+/* 分类 */
+const CATS = [
+  { key:'browser', name:'浏览器',         icon:'🌐' },
+  { key:'office',  name:'办公与文档',     icon:'📄' },
+  { key:'dev',     name:'开发工具',       icon:'💻' },
+  { key:'sci',     name:'科学与工程',     icon:'🔬' },
+  { key:'design',  name:'设计与创意',     icon:'🎨' },
+  { key:'media',   name:'影音播放与转换', icon:'🎬' },
+  { key:'comm',    name:'沟通与协作',     icon:'💬' },
+  { key:'cloud',   name:'云盘与同步',     icon:'☁️' },
+  { key:'sec',     name:'安全与隐私',     icon:'🛡️' },
+  { key:'zip',     name:'压缩与解压',     icon:'🗜️' },
+  { key:'sys',     name:'系统与驱动',     icon:'⚙️' },
+  { key:'vm',      name:'虚拟机与远程',   icon:'🖥️' },
+  { key:'ime',     name:'输入法与翻译',   icon:'⌨️' },
+  { key:'dl',      name:'下载工具',       icon:'⬇️' },
+  { key:'game',    name:'游戏平台',       icon:'🎮' },
+  { key:'util',    name:'效率小工具',     icon:'🧰' }
+];
+
+/* 数据：c 分类 / n 中文名 / e 英文名 / d 简介 / p 平台 / u 官方链接 / dom 域名 / note 大陆访问受限备注 */
+const DATA = [
+  /* ── 浏览器 ── */
+  {c:'browser',n:'谷歌浏览器',e:'Google Chrome',d:'谷歌出品，扩展生态与网页兼容性最强',p:'WML',u:'https://www.google.com/chrome/',dom:'google.com',note:1},
+  {c:'browser',n:'微软 Edge',e:'Microsoft Edge',d:'微软出品，与 Windows 深度集成的 Chromium 浏览器',p:'WML',u:'https://www.microsoft.com/edge',dom:'microsoft.com'},
+  {c:'browser',n:'火狐浏览器',e:'Mozilla Firefox',d:'开源独立内核，强调隐私与可定制',p:'WML',u:'https://www.mozilla.org/firefox/',dom:'mozilla.org'},
+  {c:'browser',n:'Safari 浏览器',e:'Safari',d:'macOS 自带浏览器，能效与续航表现优秀',p:'M',u:'https://www.apple.com/safari/',dom:'apple.com'},
+  {c:'browser',n:'Brave 浏览器',e:'Brave',d:'内置广告拦截与隐私防护的浏览器',p:'WML',u:'https://brave.com/',dom:'brave.com'},
+  {c:'browser',n:'欧朋浏览器',e:'Opera',d:'内置侧边栏与免费 VPN 的老牌浏览器',p:'WML',u:'https://www.opera.com/',dom:'opera.com'},
+  {c:'browser',n:'Vivaldi',e:'Vivaldi',d:'高度可定制、面向重度用户的浏览器',p:'WML',u:'https://vivaldi.com/',dom:'vivaldi.com'},
+  {c:'browser',n:'Arc 浏览器',e:'Arc',d:'侧边栏与空间管理的现代浏览器',p:'WM',u:'https://arc.net/',dom:'arc.net'},
+  {c:'browser',n:'洋葱浏览器',e:'Tor Browser',d:'基于 Tor 网络的匿名浏览器',p:'WML',u:'https://www.torproject.org/',dom:'torproject.org',note:1},
+  {c:'browser',n:'QQ 浏览器',e:'QQ Browser',d:'腾讯出品，国内常用的双核浏览器',p:'WM',u:'https://browser.qq.com/',dom:'qq.com'},
+  {c:'browser',n:'360 安全浏览器',e:'360 Secure Browser',d:'360 出品的国内主流浏览器',p:'W',u:'https://browser.360.cn/',dom:'360.cn'},
+  {c:'browser',n:'360 极速浏览器',e:'360 Chrome Browser',d:'360 出品的 Chromium 内核极速浏览器',p:'W',u:'https://chrome.360.cn/',dom:'360.cn'},
+  {c:'browser',n:'傲游浏览器',e:'Maxthon',d:'老牌国产跨平台浏览器',p:'WM',u:'https://www.maxthon.com/',dom:'maxthon.com'},
+  {c:'browser',n:'CentBrowser',e:'Cent Browser',d:'注重性能与隐私的 Chromium 浏览器',p:'W',u:'https://www.centbrowser.com/',dom:'centbrowser.com'},
+  {c:'browser',n:'星愿浏览器',e:'Twinkstar Browser',d:'可高度自定义的国产双核浏览器',p:'W',u:'https://www.twinkstar.com/',dom:'twinkstar.com'},
+  {c:'browser',n:'猎豹浏览器',e:'Cheetah Browser',d:'猎豹出品的国产浏览器',p:'W',u:'https://www.liebao.cn/',dom:'liebao.cn'},
+  {c:'browser',n:'世界之窗浏览器',e:'TheWorld Browser',d:'凤凰工作室出品的老牌国产浏览器',p:'W',u:'https://www.theworld.cn/',dom:'theworld.cn'},
+  {c:'browser',n:'Yandex 浏览器',e:'Yandex Browser',d:'俄罗斯 Yandex 出品的浏览器',p:'WML',u:'https://browser.yandex.com/',dom:'yandex.com'},
+  {c:'browser',n:'Waterfox',e:'Waterfox',d:'基于 Firefox 的轻量浏览器',p:'WML',u:'https://www.waterfox.net/',dom:'waterfox.net'},
+  {c:'browser',n:'LibreWolf',e:'LibreWolf',d:'强化隐私保护的 Firefox 衍生版',p:'WML',u:'https://librewolf.net/',dom:'librewolf.net'},
+  {c:'browser',n:'Floorp',e:'Floorp',d:'日本团队开发的 Firefox 衍生浏览器',p:'WML',u:'https://floorp.app/',dom:'floorp.app'},
+  {c:'browser',n:'Zen Browser',e:'Zen Browser',d:'基于 Firefox 的现代侧边栏浏览器',p:'WML',u:'https://zen-browser.app/',dom:'zen-browser.app'},
+
+  /* ── 办公与文档 ── */
+  {c:'office',n:'WPS Office',e:'WPS Office',d:'国产办公套件，兼容 Microsoft Office 格式',p:'WML',u:'https://www.wps.cn/',dom:'wps.cn'},
+  {c:'office',n:'微软 365',e:'Microsoft 365',d:'Word、Excel、PowerPoint 等订阅制办公套件',p:'WM',u:'https://www.microsoft.com/microsoft-365',dom:'microsoft.com'},
+  {c:'office',n:'LibreOffice',e:'LibreOffice',d:'开源免费的完整办公套件',p:'WML',u:'https://www.libreoffice.org/',dom:'libreoffice.org'},
+  {c:'office',n:'Apache OpenOffice',e:'Apache OpenOffice',d:'Apache 基金会维护的开源办公套件',p:'WML',u:'https://www.openoffice.org/',dom:'openoffice.org'},
+  {c:'office',n:'Notion',e:'Notion',d:'笔记、文档与数据库一体的协作空间',p:'WM',u:'https://www.notion.so/',dom:'notion.so',note:1},
+  {c:'office',n:'Obsidian',e:'Obsidian',d:'基于本地 Markdown 文件的个人知识库',p:'WML',u:'https://obsidian.md/',dom:'obsidian.md'},
+  {c:'office',n:'印象笔记',e:'Evernote',d:'跨平台笔记与知识管理工具',p:'WM',u:'https://www.yinxiang.com/',dom:'yinxiang.com'},
+  {c:'office',n:'Typora',e:'Typora',d:'极简的所见即所得 Markdown 编辑器',p:'WML',u:'https://typora.io/',dom:'typora.io'},
+  {c:'office',n:'语雀',e:'Yuque',d:'阿里出品的文档与知识库协作平台',p:'WM',u:'https://www.yuque.com/',dom:'yuque.com'},
+  {c:'office',n:'石墨文档',e:'Shimo Docs',d:'在线协作文档与表格',p:'WM',u:'https://shimo.im/',dom:'shimo.im'},
+  {c:'office',n:'腾讯文档',e:'Tencent Docs',d:'支持多人实时协作的在线文档与表格',p:'WM',u:'https://docs.qq.com/',dom:'docs.qq.com'},
+  {c:'office',n:'金山文档',e:'Kingsoft Docs',d:'WPS 生态的在线协作文档',p:'WM',u:'https://www.kdocs.cn/',dom:'kdocs.cn'},
+  {c:'office',n:'XMind',e:'XMind',d:'思维导图与头脑风暴工具',p:'WM',u:'https://www.xmind.cn/',dom:'xmind.cn'},
+  {c:'office',n:'Adobe Acrobat',e:'Adobe Acrobat',d:'PDF 阅读、编辑与签署的标准工具',p:'WM',u:'https://www.adobe.com/acrobat.html',dom:'adobe.com'},
+  {c:'office',n:'福昕阅读器',e:'Foxit PDF Reader',d:'轻量的 PDF 阅读与编辑工具',p:'WM',u:'https://www.foxit.com/',dom:'foxit.com'},
+  {c:'office',n:'PDF24 Tools',e:'PDF24',d:'免费无广告的 PDF 在线与桌面工具',p:'W',u:'https://tools.pdf24.org/',dom:'pdf24.org'},
+  {c:'office',n:'iLovePDF',e:'iLovePDF',d:'在线 PDF 合并、拆分与转换',p:'WM',u:'https://www.ilovepdf.com/',dom:'ilovepdf.com'},
+  {c:'office',n:'Smallpdf',e:'Smallpdf',d:'在线 PDF 编辑与格式转换',p:'WM',u:'https://www.smallpdf.com/',dom:'smallpdf.com'},
+  {c:'office',n:'Calibre',e:'Calibre',d:'开源电子书管理与格式转换',p:'WML',u:'https://calibre-ebook.com/',dom:'calibre-ebook.com'},
+  {c:'office',n:'Overleaf',e:'Overleaf',d:'在线 LaTeX 协作编辑器',p:'WM',u:'https://www.overleaf.com/',dom:'overleaf.com'},
+  {c:'office',n:'TeXstudio',e:'TeXstudio',d:'开源 LaTeX 写作编辑器',p:'WML',u:'https://www.texstudio.org/',dom:'texstudio.org'},
+  {c:'office',n:'ProcessOn',e:'ProcessOn',d:'在线流程图与思维导图',p:'WM',u:'https://www.processon.com/',dom:'processon.com'},
+  {c:'office',n:'亿图图示',e:'EdrawMax',d:'流程图、架构图等一站式绘图',p:'WML',u:'https://www.edrawsoft.cn/',dom:'edrawsoft.cn'},
+  {c:'office',n:'boardmix',e:'boardmix',d:'在线白板与团队协作画布',p:'WM',u:'https://boardmix.cn/',dom:'boardmix.cn'},
+  {c:'office',n:'Miro',e:'Miro',d:'国际主流的在线协作白板',p:'WM',u:'https://miro.com/',dom:'miro.com'},
+  {c:'office',n:'Microsoft Visio',e:'Microsoft Visio',d:'微软的专业流程图与图表工具',p:'W',u:'https://www.microsoft.com/microsoft-365/visio',dom:'microsoft.com'},
+  {c:'office',n:'MathType',e:'MathType',d:'专业的数学公式编辑器',p:'WM',u:'https://www.wiris.com/mathtype/',dom:'wiris.com'},
+  {c:'office',n:'GeoGebra',e:'GeoGebra',d:'动态数学与几何绘图工具',p:'WML',u:'https://www.geogebra.org/',dom:'geogebra.org'},
+  {c:'office',n:'CAJViewer',e:'CAJViewer',d:'知网文献专用阅读器',p:'WM',u:'https://cajviewer.cnki.net/',dom:'cnki.net'},
+  {c:'office',n:'永中 Office',e:'Yozo Office',d:'国产跨平台办公套件',p:'WL',u:'https://www.yozosoft.com/',dom:'yozosoft.com'},
+  {c:'office',n:'OneNote',e:'Microsoft OneNote',d:'微软的自由笔记与知识管理',p:'WM',u:'https://www.onenote.com/',dom:'onenote.com'},
+  {c:'office',n:'有道云笔记',e:'Youdao Note',d:'网易出品的跨平台笔记工具',p:'WM',u:'https://note.youdao.com/',dom:'youdao.com'},
+  {c:'office',n:'为知笔记',e:'WizNote',d:'老牌国产知识管理笔记',p:'WM',u:'https://www.wiz.cn/',dom:'wiz.cn'},
+  {c:'office',n:'Joplin',e:'Joplin',d:'开源免费的 Markdown 笔记',p:'WML',u:'https://joplinapp.org/',dom:'joplinapp.org'},
+  {c:'office',n:'Logseq',e:'Logseq',d:'开源大纲式双链笔记',p:'WML',u:'https://logseq.com/',dom:'logseq.com'},
+  {c:'office',n:'思源笔记',e:'SiYuan',d:'开源块级双链个人知识库',p:'WML',u:'https://b3log.org/siyuan/',dom:'b3log.org'},
+  {c:'office',n:'wolai',e:'wolai',d:'国产块状笔记与协作空间',p:'WM',u:'https://www.wolai.com/',dom:'wolai.com'},
+  {c:'office',n:'FlowUs 息流',e:'FlowUs',d:'国产多维表格与文档协作',p:'WM',u:'https://flowus.cn/',dom:'flowus.cn'},
+  {c:'office',n:'幕布',e:'Mubu',d:'极简大纲笔记与一键思维导图',p:'WM',u:'https://mubu.com/',dom:'mubu.com'},
+  {c:'office',n:'知犀思维导图',e:'ZhiXi Mind',d:'免费无节点限制的思维导图',p:'WM',u:'https://www.zhixi.com/',dom:'zhixi.com'},
+  {c:'office',n:'Freeplane',e:'Freeplane',d:'开源免费的思维导图软件',p:'WML',u:'https://www.freeplane.org/',dom:'freeplane.org'},
+  {c:'office',n:'MindNode',e:'MindNode',d:'macOS 上的优雅思维导图',p:'M',u:'https://mindnode.com/',dom:'mindnode.com'},
+  {c:'office',n:'ONLYOFFICE',e:'ONLYOFFICE',d:'开源办公套件与文档协作',p:'WML',u:'https://www.onlyoffice.com/',dom:'onlyoffice.com'},
+  {c:'office',n:'PDFgear',e:'PDFgear',d:'完全免费的 PDF 编辑与转换',p:'WM',u:'https://www.pdfgear.com/',dom:'pdfgear.com'},
+  {c:'office',n:'万兴 PDF',e:'PDFelement',d:'万兴科技的 PDF 编辑与转换',p:'WM',u:'https://pdf.wondershare.cn/',dom:'wondershare.cn'},
+  {c:'office',n:'ABBYY FineReader',e:'ABBYY FineReader',d:'专业 PDF 编辑与 OCR 识别',p:'W',u:'https://www.abbyy.com/',dom:'abbyy.com'},
+  {c:'office',n:'EndNote',e:'EndNote',d:'科研文献管理与引用工具',p:'WM',u:'https://endnote.com/',dom:'endnote.com'},
+  {c:'office',n:'NoteExpress',e:'NoteExpress',d:'国产文献管理与论文写作',p:'W',u:'https://www.inoteexpress.com/',dom:'inoteexpress.com'},
+  {c:'office',n:'Mendeley',e:'Mendeley',d:'Elsevier 旗下的文献管理工具',p:'WM',u:'https://www.mendeley.com/',dom:'mendeley.com'},
+  {c:'office',n:'Scrivener',e:'Scrivener',d:'长文写作与书稿管理工具',p:'WM',u:'https://www.literatureandlatte.com/scrivener/',dom:'literatureandlatte.com'},
+  {c:'office',n:'Jira',e:'Jira',d:'Atlassian 敏捷项目管理与缺陷跟踪',p:'WML',u:'https://www.atlassian.com/software/jira',dom:'atlassian.com'},
+  {c:'office',n:'Confluence',e:'Confluence',d:'Atlassian 团队知识库与文档协作',p:'WML',u:'https://www.atlassian.com/software/confluence',dom:'atlassian.com'},
+  {c:'office',n:'Trello',e:'Trello',d:'看板式任务管理工具',p:'WML',u:'https://trello.com/',dom:'trello.com'},
+  {c:'office',n:'Asana',e:'Asana',d:'团队任务与项目协作平台',p:'WML',u:'https://asana.com/',dom:'asana.com'},
+  {c:'office',n:'ClickUp',e:'ClickUp',d:'一体化项目管理平台',p:'WML',u:'https://clickup.com/',dom:'clickup.com'},
+  {c:'office',n:'Monday.com',e:'Monday.com',d:'可视化项目与工作管理平台',p:'WML',u:'https://monday.com/',dom:'monday.com'},
+  {c:'office',n:'Airtable',e:'Airtable',d:'表格与数据库混合的协作工具',p:'WML',u:'https://www.airtable.com/',dom:'airtable.com'},
+  {c:'office',n:'Teambition',e:'Teambition',d:'阿里旗下团队协作与项目管理',p:'WML',u:'https://www.teambition.com/',dom:'teambition.com'},
+  {c:'office',n:'Tower',e:'Tower',d:'国内团队协作与项目管理工具',p:'WML',u:'https://tower.im/',dom:'tower.im'},
+  {c:'office',n:'Worktile',e:'Worktile',d:'企业级项目协作与任务管理',p:'WML',u:'https://worktile.com/',dom:'worktile.com'},
+  {c:'office',n:'禅道',e:'ZenTao',d:'国产开源项目管理软件',p:'WML',u:'https://www.zentao.net/',dom:'zentao.net'},
+  {c:'office',n:'Redmine',e:'Redmine',d:'开源项目管理与缺陷跟踪系统',p:'WML',u:'https://www.redmine.org/',dom:'redmine.org'},
+  {c:'office',n:'draw.io',e:'draw.io',d:'免费在线流程图与架构图绘制',p:'WML',u:'https://www.diagrams.net/',dom:'diagrams.net'},
+
+  /* ── 开发工具 ── */
+  {c:'dev',n:'VS Code',e:'Visual Studio Code',d:'微软开源代码编辑器，插件生态强大',p:'WML',u:'https://code.visualstudio.com/',dom:'code.visualstudio.com'},
+  {c:'dev',n:'Visual Studio',e:'Visual Studio',d:'微软官方 IDE，覆盖 .NET 与 C++ 开发',p:'WM',u:'https://visualstudio.microsoft.com/',dom:'visualstudio.microsoft.com'},
+  {c:'dev',n:'JetBrains 全家桶',e:'JetBrains IDEs',d:'IntelliJ IDEA、PyCharm、WebStorm 等专业 IDE',p:'WML',u:'https://www.jetbrains.com/',dom:'jetbrains.com'},
+  {c:'dev',n:'Sublime Text',e:'Sublime Text',d:'轻量快速的代码与文本编辑器',p:'WML',u:'https://www.sublimetext.com/',dom:'sublimetext.com'},
+  {c:'dev',n:'Vim',e:'Vim',d:'终端里的老牌高效文本编辑器',p:'WML',u:'https://www.vim.org/',dom:'vim.org'},
+  {c:'dev',n:'Neovim',e:'Neovim',d:'Vim 的现代重构版本',p:'WML',u:'https://neovim.io/',dom:'neovim.io'},
+  {c:'dev',n:'Git',e:'Git',d:'分布式版本控制系统',p:'WML',u:'https://git-scm.com/',dom:'git-scm.com'},
+  {c:'dev',n:'GitHub Desktop',e:'GitHub Desktop',d:'GitHub 官方桌面客户端',p:'WML',u:'https://desktop.github.com/',dom:'desktop.github.com'},
+  {c:'dev',n:'Node.js',e:'Node.js',d:'JavaScript 服务端运行时',p:'WML',u:'https://nodejs.org/',dom:'nodejs.org'},
+  {c:'dev',n:'Python',e:'Python',d:'通用编程语言官方站点与下载页',p:'WML',u:'https://www.python.org/',dom:'python.org'},
+  {c:'dev',n:'Anaconda',e:'Anaconda',d:'面向数据科学的 Python 发行版',p:'WML',u:'https://www.anaconda.com/',dom:'anaconda.com'},
+  {c:'dev',n:'Docker',e:'Docker',d:'容器化开发与运行环境',p:'WML',u:'https://www.docker.com/',dom:'docker.com'},
+  {c:'dev',n:'Postman',e:'Postman',d:'API 调试、测试与协作工具',p:'WML',u:'https://www.postman.com/',dom:'postman.com'},
+  {c:'dev',n:'Android Studio',e:'Android Studio',d:'谷歌官方 Android 开发 IDE',p:'WML',u:'https://developer.android.com/studio',dom:'developer.android.com',note:1},
+  {c:'dev',n:'Xcode',e:'Xcode',d:'苹果官方 macOS / iOS 开发工具链',p:'M',u:'https://developer.apple.com/xcode/',dom:'developer.apple.com'},
+  {c:'dev',n:'DBeaver',e:'DBeaver',d:'开源通用数据库管理工具',p:'WML',u:'https://dbeaver.io/',dom:'dbeaver.io'},
+  {c:'dev',n:'Navicat',e:'Navicat',d:'商业数据库管理与开发工具',p:'WM',u:'https://www.navicat.com/',dom:'navicat.com'},
+  {c:'dev',n:'Wireshark',e:'Wireshark',d:'开源网络协议分析器',p:'WML',u:'https://www.wireshark.org/',dom:'wireshark.org'},
+  {c:'dev',n:'PuTTY',e:'PuTTY',d:'经典的 SSH / Telnet 客户端',p:'W',u:'https://www.putty.org/',dom:'putty.org'},
+  {c:'dev',n:'MobaXterm',e:'MobaXterm',d:'集终端、SSH 与文件传输于一身',p:'W',u:'https://mobaxterm.mobatek.net/',dom:'mobatek.net'},
+  {c:'dev',n:'iTerm2',e:'iTerm2',d:'macOS 上功能强大的终端',p:'M',u:'https://iterm2.com/',dom:'iterm2.com'},
+  {c:'dev',n:'WinSCP',e:'WinSCP',d:'Windows 上的 SFTP / SCP 客户端',p:'W',u:'https://winscp.net/',dom:'winscp.net'},
+  {c:'dev',n:'FileZilla',e:'FileZilla',d:'开源 FTP / SFTP 客户端与服务器',p:'WML',u:'https://filezilla-project.org/',dom:'filezilla-project.org'},
+  {c:'dev',n:'Go',e:'Go',d:'谷歌开发的编译型编程语言',p:'WML',u:'https://go.dev/',dom:'go.dev'},
+  {c:'dev',n:'Rust',e:'Rust',d:'注重安全与性能的编程语言',p:'WML',u:'https://www.rust-lang.org/',dom:'rust-lang.org'},
+  {c:'dev',n:'Oracle Java',e:'Oracle Java',d:'Java 官方运行时与下载',p:'WML',u:'https://www.oracle.com/java/',dom:'oracle.com'},
+  {c:'dev',n:'Eclipse Temurin',e:'Adoptium',d:'Eclipse 基金会的开源 JDK 发行版',p:'WML',u:'https://adoptium.net/',dom:'adoptium.net'},
+  {c:'dev',n:'HBuilderX',e:'HBuilderX',d:'DCloud 出品的前端与小程序开发 IDE',p:'WM',u:'https://www.dcloud.io/hbuilderx.html',dom:'dcloud.io'},
+  {c:'dev',n:'微信开发者工具',e:'WeChat DevTools',d:'微信小程序与公众号官方开发工具',p:'WM',u:'https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html',dom:'weixin.qq.com'},
+  {c:'dev',n:'Apifox',e:'Apifox',d:'API 文档、调试、测试一体化平台',p:'WML',u:'https://apifox.com/',dom:'apifox.com'},
+  {c:'dev',n:'Fiddler',e:'Fiddler',d:'Telerik 出品的抓包调试工具',p:'WML',u:'https://www.telerik.com/fiddler',dom:'telerik.com'},
+  {c:'dev',n:'Charles',e:'Charles Proxy',d:'macOS 起家的 HTTP 抓包工具',p:'WML',u:'https://www.charlesproxy.com/',dom:'charlesproxy.com'},
+  {c:'dev',n:'Beyond Compare',e:'Beyond Compare',d:'强大的文件与文件夹对比工具',p:'WML',u:'https://www.scootersoftware.com/',dom:'scootersoftware.com'},
+  {c:'dev',n:'WinMerge',e:'WinMerge',d:'开源文件差异对比与合并',p:'W',u:'https://winmerge.org/',dom:'winmerge.org'},
+  {c:'dev',n:'Sourcetree',e:'Sourcetree',d:'Atlassian 出品的 Git 图形客户端',p:'WM',u:'https://www.sourcetreeapp.com/',dom:'sourcetreeapp.com'},
+  {c:'dev',n:'GitKraken',e:'GitKraken',d:'界面现代的跨平台 Git 客户端',p:'WML',u:'https://www.gitkraken.com/',dom:'gitkraken.com'},
+  {c:'dev',n:'TortoiseGit',e:'TortoiseGit',d:'Windows 资源管理器 Git 集成',p:'W',u:'https://tortoisegit.org/',dom:'tortoisegit.org'},
+  {c:'dev',n:'Xshell',e:'Xshell',d:'NetSarang 出品的专业 SSH 终端',p:'W',u:'https://www.netsarang.com/',dom:'netsarang.com'},
+  {c:'dev',n:'FinalShell',e:'FinalShell',d:'国产一体化 SSH 与服务器管理',p:'WML',u:'https://www.hostbuf.com/',dom:'hostbuf.com'},
+  {c:'dev',n:'Tabby',e:'Tabby',d:'开源可定制的现代化终端',p:'WML',u:'https://tabby.sh/',dom:'tabby.sh'},
+  {c:'dev',n:'Warp',e:'Warp',d:'AI 加持的现代终端',p:'WML',u:'https://www.warp.dev/',dom:'warp.dev'},
+  {c:'dev',n:'Windows Terminal',e:'Windows Terminal',d:'微软官方 Windows 终端',p:'W',u:'https://github.com/microsoft/terminal',dom:'github.com'},
+  {c:'dev',n:'Termius',e:'Termius',d:'跨平台 SSH 客户端，支持多端同步',p:'WML',u:'https://termius.com/',dom:'termius.com'},
+  {c:'dev',n:'PyCharm',e:'PyCharm',d:'JetBrains 出品的 Python 专业 IDE',p:'WML',u:'https://www.jetbrains.com/pycharm/',dom:'jetbrains.com'},
+  {c:'dev',n:'IntelliJ IDEA',e:'IntelliJ IDEA',d:'JetBrains 出品的 Java 开发 IDE',p:'WML',u:'https://www.jetbrains.com/idea/',dom:'jetbrains.com'},
+  {c:'dev',n:'WebStorm',e:'WebStorm',d:'JetBrains 出品的前端开发 IDE',p:'WML',u:'https://www.jetbrains.com/webstorm/',dom:'jetbrains.com'},
+  {c:'dev',n:'GoLand',e:'GoLand',d:'JetBrains 出品的 Go 开发 IDE',p:'WML',u:'https://www.jetbrains.com/go/',dom:'jetbrains.com'},
+  {c:'dev',n:'CLion',e:'CLion',d:'JetBrains 出品的 C/C++ 开发 IDE',p:'WML',u:'https://www.jetbrains.com/clion/',dom:'jetbrains.com'},
+  {c:'dev',n:'Rider',e:'JetBrains Rider',d:'JetBrains 出品的 .NET 开发 IDE',p:'WML',u:'https://www.jetbrains.com/rider/',dom:'jetbrains.com'},
+  {c:'dev',n:'DataGrip',e:'DataGrip',d:'JetBrains 出品的数据库 IDE',p:'WML',u:'https://www.jetbrains.com/datagrip/',dom:'jetbrains.com'},
+  {c:'dev',n:'Eclipse',e:'Eclipse',d:'老牌开源 Java 开发 IDE',p:'WML',u:'https://www.eclipse.org/',dom:'eclipse.org'},
+  {c:'dev',n:'Cursor',e:'Cursor',d:'AI 驱动的智能代码编辑器',p:'WML',u:'https://www.cursor.com/',dom:'cursor.com'},
+  {c:'dev',n:'Windsurf',e:'Windsurf',d:'AI 编程 IDE，前身为 Codeium',p:'WML',u:'https://windsurf.com/',dom:'windsurf.com'},
+  {c:'dev',n:'Trae',e:'Trae',d:'字节跳动出品的 AI IDE',p:'WML',u:'https://www.trae.cn/',dom:'trae.cn'},
+  {c:'dev',n:'Emacs',e:'GNU Emacs',d:'高度可扩展的老牌文本编辑器',p:'WML',u:'https://www.gnu.org/software/emacs/',dom:'gnu.org'},
+  {c:'dev',n:'EditPlus',e:'EditPlus',d:'轻量多功能文本与代码编辑器',p:'W',u:'https://www.editplus.com/',dom:'editplus.com'},
+  {c:'dev',n:'EmEditor',e:'EmEditor',d:'擅长超大文件的文本编辑器',p:'W',u:'https://www.emeditor.com/',dom:'emeditor.com'},
+  {c:'dev',n:'UltraEdit',e:'UltraEdit',d:'老牌强大的文本与十六进制编辑器',p:'WML',u:'https://www.ultraedit.com/',dom:'ultraedit.com'},
+  {c:'dev',n:'HxD',e:'HxD',d:'免费的十六进制编辑器',p:'W',u:'https://mh-nexus.de/en/hxd.php',dom:'mh-nexus.de'},
+  {c:'dev',n:'MySQL Workbench',e:'MySQL Workbench',d:'MySQL 官方数据库设计与管理',p:'WML',u:'https://www.mysql.com/products/workbench/',dom:'mysql.com'},
+  {c:'dev',n:'Another Redis Desktop Manager',e:'Another Redis Desktop Manager',d:'开源 Redis 图形管理工具',p:'WML',u:'https://github.com/qishibo/AnotherRedisDesktopManager',dom:'github.com'},
+  {c:'dev',n:'Insomnia',e:'Insomnia',d:'开源 API 调试与测试工具',p:'WML',u:'https://insomnia.rest/',dom:'insomnia.rest'},
+  {c:'dev',n:'Maven',e:'Apache Maven',d:'Java 项目构建与依赖管理',p:'WML',u:'https://maven.apache.org/',dom:'apache.org'},
+  {c:'dev',n:'CMake',e:'CMake',d:'跨平台 C/C++ 构建系统',p:'WML',u:'https://cmake.org/',dom:'cmake.org'},
+  {c:'dev',n:'MSYS2',e:'MSYS2',d:'Windows 上的类 Unix 开发环境',p:'W',u:'https://www.msys2.org/',dom:'msys2.org'},
+  {c:'dev',n:'Flutter',e:'Flutter',d:'Google 跨平台 UI 开发框架',p:'WML',u:'https://flutter.dev/',dom:'flutter.dev'},
+  {c:'dev',n:'Dart',e:'Dart',d:'Google 出品的面向对象编程语言',p:'WML',u:'https://dart.dev/',dom:'dart.dev'},
+  {c:'dev',n:'Kotlin',e:'Kotlin',d:'JetBrains 出品的现代编程语言，安卓首选',p:'WML',u:'https://kotlinlang.org/',dom:'kotlinlang.org'},
+  {c:'dev',n:'Swift',e:'Swift',d:'Apple 官方应用开发语言',p:'WML',u:'https://www.swift.org/',dom:'swift.org'},
+  {c:'dev',n:'Ruby',e:'Ruby',d:'简洁优雅的动态编程语言',p:'WML',u:'https://www.ruby-lang.org/',dom:'ruby-lang.org'},
+  {c:'dev',n:'PHP',e:'PHP',d:'广泛使用的服务端脚本语言',p:'WML',u:'https://www.php.net/',dom:'php.net'},
+  {c:'dev',n:'Julia',e:'Julia',d:'面向科学计算的高性能编程语言',p:'WML',u:'https://julialang.org/',dom:'julialang.org'},
+  {c:'dev',n:'R 语言',e:'R',d:'统计分析与数据可视化语言',p:'WML',u:'https://www.r-project.org/',dom:'r-project.org'},
+  {c:'dev',n:'RStudio',e:'RStudio',d:'R 与 Python 的数据科学 IDE',p:'WML',u:'https://posit.co/',dom:'posit.co'},
+  {c:'dev',n:'MySQL',e:'MySQL',d:'全球最流行的开源关系数据库',p:'WML',u:'https://www.mysql.com/',dom:'mysql.com'},
+  {c:'dev',n:'PostgreSQL',e:'PostgreSQL',d:'功能强大的开源对象关系数据库',p:'WML',u:'https://www.postgresql.org/',dom:'postgresql.org'},
+  {c:'dev',n:'MariaDB',e:'MariaDB',d:'MySQL 的开源分支数据库',p:'WML',u:'https://mariadb.org/',dom:'mariadb.org'},
+  {c:'dev',n:'SQLite',e:'SQLite',d:'轻量级嵌入式关系数据库',p:'WML',u:'https://www.sqlite.org/',dom:'sqlite.org'},
+  {c:'dev',n:'Redis',e:'Redis',d:'高性能内存键值数据库',p:'WML',u:'https://redis.io/',dom:'redis.io'},
+  {c:'dev',n:'MongoDB',e:'MongoDB',d:'主流文档型 NoSQL 数据库',p:'WML',u:'https://www.mongodb.com/',dom:'mongodb.com'},
+  {c:'dev',n:'Nginx',e:'Nginx',d:'高性能 Web 服务器与反向代理',p:'WML',u:'https://nginx.org/',dom:'nginx.org'},
+  {c:'dev',n:'XAMPP',e:'XAMPP',d:'Apache + MySQL + PHP 集成环境',p:'WML',u:'https://www.apachefriends.org/',dom:'apachefriends.org'},
+  {c:'dev',n:'phpStudy',e:'phpStudy',d:'国产 PHP 集成开发环境',p:'W',u:'https://www.xp.cn/',dom:'xp.cn'},
+  {c:'dev',n:'WampServer',e:'WampServer',d:'Windows 下的 PHP 集成环境',p:'W',u:'https://www.wampserver.com/',dom:'wampserver.com'},
+  /* ── 科学与工程 ── */
+  {c:'sci',n:'MATLAB',e:'MATLAB',d:'MathWorks 数值计算与仿真平台',p:'WML',u:'https://www.mathworks.com/',dom:'mathworks.com'},
+  {c:'sci',n:'Mathematica',e:'Mathematica',d:'Wolfram 符号计算与科学软件',p:'WML',u:'https://www.wolfram.com/mathematica/',dom:'wolfram.com'},
+  {c:'sci',n:'Maple',e:'Maple',d:'Maplesoft 数学符号计算软件',p:'WML',u:'https://www.maplesoft.com/',dom:'maplesoft.com'},
+  {c:'sci',n:'SPSS',e:'IBM SPSS',d:'IBM 统计分析软件',p:'WM',u:'https://www.ibm.com/products/spss-statistics',dom:'ibm.com'},
+  {c:'sci',n:'Stata',e:'Stata',d:'统计分析与数据管理软件',p:'WM',u:'https://www.stata.com/',dom:'stata.com'},
+  {c:'sci',n:'SAS',e:'SAS',d:'企业级数据分析平台',p:'WM',u:'https://www.sas.com/',dom:'sas.com'},
+  {c:'sci',n:'Origin',e:'Origin',d:'OriginLab 科学绘图与数据分析',p:'W',u:'https://www.originlab.com/',dom:'originlab.com'},
+  {c:'sci',n:'GraphPad Prism',e:'GraphPad Prism',d:'生物统计绘图与分析软件',p:'WM',u:'https://www.graphpad.com/',dom:'graphpad.com'},
+  {c:'sci',n:'EViews',e:'EViews',d:'计量经济学与时间序列分析',p:'W',u:'https://www.eviews.com/',dom:'eviews.com'},
+  {c:'sci',n:'AutoCAD',e:'AutoCAD',d:'Autodesk 经典 CAD 制图软件',p:'WM',u:'https://www.autodesk.com/products/autocad/',dom:'autodesk.com'},
+  {c:'sci',n:'中望CAD',e:'ZWCAD',d:'国产主流 CAD 设计软件',p:'WL',u:'https://www.zwcad.com/',dom:'zwcad.com'},
+  {c:'sci',n:'浩辰CAD',e:'GstarCAD',d:'国产 CAD 图纸设计与浏览',p:'WML',u:'https://www.gstarcad.com/',dom:'gstarcad.com'},
+  {c:'sci',n:'CAXA',e:'CAXA',d:'国产 CAD/CAM/PLM 工业软件',p:'W',u:'https://www.caxa.com/',dom:'caxa.com'},
+  {c:'sci',n:'SolidWorks',e:'SolidWorks',d:'达索三维机械设计软件',p:'W',u:'https://www.solidworks.com/',dom:'solidworks.com'},
+  {c:'sci',n:'Fusion 360',e:'Fusion 360',d:'Autodesk 云端一体化 3D CAD/CAM',p:'WM',u:'https://www.autodesk.com/products/fusion-360/',dom:'autodesk.com'},
+  {c:'sci',n:'Inventor',e:'Inventor',d:'Autodesk 三维机械设计',p:'W',u:'https://www.autodesk.com/products/inventor/',dom:'autodesk.com'},
+  {c:'sci',n:'Revit',e:'Revit',d:'Autodesk BIM 建筑设计软件',p:'W',u:'https://www.autodesk.com/products/revit/',dom:'autodesk.com'},
+  {c:'sci',n:'CATIA',e:'CATIA',d:'达索高端三维设计平台',p:'W',u:'https://www.3ds.com/products/catia/',dom:'3ds.com'},
+  {c:'sci',n:'Rhino',e:'Rhinoceros',d:'NURBS 三维建模软件',p:'WM',u:'https://www.rhino3d.com/',dom:'rhino3d.com'},
+  {c:'sci',n:'SketchUp',e:'SketchUp',d:'草图大师三维建模软件',p:'WM',u:'https://www.sketchup.com/',dom:'sketchup.com'},
+  {c:'sci',n:'FreeCAD',e:'FreeCAD',d:'开源参数化三维建模',p:'WML',u:'https://www.freecad.org/',dom:'freecad.org'},
+  {c:'sci',n:'ANSYS',e:'ANSYS',d:'工程仿真分析软件',p:'W',u:'https://www.ansys.com/',dom:'ansys.com'},
+  {c:'sci',n:'COMSOL',e:'COMSOL Multiphysics',d:'多物理场仿真软件',p:'WML',u:'https://www.comsol.com/',dom:'comsol.com'},
+  {c:'sci',n:'LabVIEW',e:'LabVIEW',d:'NI 图形化编程与测试测量',p:'W',u:'https://www.ni.com/labview/',dom:'ni.com'},
+  {c:'sci',n:'Proteus',e:'Proteus',d:'电路仿真与单片机仿真软件',p:'W',u:'https://www.labcenter.com/',dom:'labcenter.com'},
+  {c:'sci',n:'Altium Designer',e:'Altium Designer',d:'专业 PCB 电路设计软件',p:'W',u:'https://www.altium.com/',dom:'altium.com'},
+  {c:'sci',n:'KiCad',e:'KiCad',d:'开源 EDA 电路设计套件',p:'WML',u:'https://www.kicad.org/',dom:'kicad.org'},
+  {c:'sci',n:'立创EDA',e:'LCEDA',d:'国产免费在线电路设计工具',p:'WML',u:'https://lceda.cn/',dom:'lceda.cn'},
+  {c:'sci',n:'Keil MDK',e:'Keil MDK',d:'ARM 嵌入式开发工具链',p:'W',u:'https://www.keil.com/',dom:'keil.com'},
+  {c:'sci',n:'IAR',e:'IAR Embedded Workbench',d:'嵌入式系统开发工具',p:'W',u:'https://www.iar.com/',dom:'iar.com'},
+  {c:'sci',n:'STM32CubeIDE',e:'STM32CubeIDE',d:'ST 官方 STM32 开发环境',p:'WML',u:'https://www.st.com/stm32cubeide',dom:'st.com'},
+  {c:'sci',n:'Arduino',e:'Arduino IDE',d:'开源硬件与单片机开发平台',p:'WML',u:'https://www.arduino.cc/',dom:'arduino.cc'},
+
+  /* ── 设计与创意 ── */
+  {c:'design',n:'Photoshop',e:'Adobe Photoshop',d:'图像处理、合成与修图的行业标准',p:'WM',u:'https://www.adobe.com/products/photoshop.html',dom:'adobe.com'},
+  {c:'design',n:'Illustrator',e:'Adobe Illustrator',d:'矢量图形、插画与品牌设计',p:'WM',u:'https://www.adobe.com/products/illustrator.html',dom:'adobe.com'},
+  {c:'design',n:'Premiere Pro',e:'Adobe Premiere Pro',d:'专业视频剪辑与后期',p:'WM',u:'https://www.adobe.com/products/premiere.html',dom:'adobe.com'},
+  {c:'design',n:'After Effects',e:'Adobe After Effects',d:'影视特效与动态图形制作',p:'WM',u:'https://www.adobe.com/products/aftereffects.html',dom:'adobe.com'},
+  {c:'design',n:'Lightroom',e:'Adobe Lightroom',d:'摄影后期与批量调色',p:'WM',u:'https://www.adobe.com/products/photoshop-lightroom.html',dom:'adobe.com'},
+  {c:'design',n:'Figma',e:'Figma',d:'在线协作式 UI / UX 设计工具',p:'WM',u:'https://www.figma.com/',dom:'figma.com'},
+  {c:'design',n:'Sketch',e:'Sketch',d:'macOS 上的矢量界面设计工具',p:'M',u:'https://www.sketch.com/',dom:'sketch.com'},
+  {c:'design',n:'Affinity 套件',e:'Affinity Suite',d:'买断制的 Photo / Designer / Publisher 设计套件',p:'WM',u:'https://affinity.serif.com/',dom:'affinity.serif.com'},
+  {c:'design',n:'GIMP',e:'GIMP',d:'开源图像编辑与合成软件',p:'WML',u:'https://www.gimp.org/',dom:'gimp.org'},
+  {c:'design',n:'Inkscape',e:'Inkscape',d:'开源矢量绘图工具',p:'WML',u:'https://inkscape.org/',dom:'inkscape.org'},
+  {c:'design',n:'Krita',e:'Krita',d:'开源数字绘画与插画软件',p:'WML',u:'https://krita.org/',dom:'krita.org'},
+  {c:'design',n:'Blender',e:'Blender',d:'开源 3D 建模、动画与渲染',p:'WML',u:'https://www.blender.org/',dom:'blender.org'},
+  {c:'design',n:'达芬奇',e:'DaVinci Resolve',d:'专业剪辑与调色，免费版功能完整',p:'WML',u:'https://www.blackmagicdesign.com/products/davinciresolve',dom:'blackmagicdesign.com'},
+  {c:'design',n:'剪映专业版',e:'CapCut',d:'抖音出品的易上手视频剪辑工具',p:'WM',u:'https://www.capcut.cn/',dom:'capcut.cn'},
+  {c:'design',n:'Canva 可画',e:'Canva',d:'模板化在线平面设计平台',p:'WM',u:'https://www.canva.com/',dom:'canva.com'},
+  {c:'design',n:'Paint.NET',e:'Paint.NET',d:'Windows 上的轻量图像编辑软件',p:'W',u:'https://www.getpaint.net/',dom:'getpaint.net'},
+  {c:'design',n:'OBS Studio',e:'OBS Studio',d:'开源直播推流与录屏软件',p:'WML',u:'https://obsproject.com/',dom:'obsproject.com'},
+  {c:'design',n:'CorelDRAW',e:'CorelDRAW',d:'老牌矢量插画与排版设计',p:'WM',u:'https://www.coreldraw.com/',dom:'coreldraw.com'},
+  {c:'design',n:'InDesign',e:'Adobe InDesign',d:'出版物排版与版式设计',p:'WM',u:'https://www.adobe.com/products/indesign.html',dom:'adobe.com'},
+  {c:'design',n:'Audition',e:'Adobe Audition',d:'专业音频编辑与混音',p:'WM',u:'https://www.adobe.com/products/audition.html',dom:'adobe.com'},
+  {c:'design',n:'万兴喵影',e:'Wondershare Filmora',d:'易上手的功能视频剪辑',p:'WM',u:'https://miao.wondershare.cn/',dom:'wondershare.cn'},
+  {c:'design',n:'必剪',e:'Bcut',d:'B 站出品的视频剪辑工具',p:'WM',u:'https://bcut.bilibili.cn/',dom:'bilibili.cn'},
+  {c:'design',n:'快剪辑',e:'Kuaijianji',d:'360 出品的在线视频剪辑',p:'W',u:'https://www.kuaijianji.com/',dom:'kuaijianji.com'},
+  {c:'design',n:'美图秀秀',e:'Meitu',d:'人像美化与图片处理',p:'W',u:'https://xiuxiu.meitu.com/',dom:'meitu.com'},
+  {c:'design',n:'Capture One',e:'Capture One',d:'专业 RAW 格式照片处理',p:'WM',u:'https://www.captureone.com/',dom:'captureone.com'},
+  {c:'design',n:'Unity',e:'Unity',d:'全球流行的跨平台游戏引擎',p:'WML',u:'https://unity.com/',dom:'unity.com'},
+  {c:'design',n:'Unreal Engine',e:'Unreal Engine',d:'Epic 的 3A 级游戏与影视引擎',p:'WML',u:'https://www.unrealengine.com/',dom:'unrealengine.com'},
+  {c:'design',n:'Cinema 4D',e:'Cinema 4D',d:'Maxon 出品的三维建模动画',p:'WM',u:'https://www.maxon.net/en/cinema-4d',dom:'maxon.net'},
+  {c:'design',n:'Maya',e:'Autodesk Maya',d:'影视级三维动画与建模',p:'WML',u:'https://www.autodesk.com/products/maya/',dom:'autodesk.com'},
+  {c:'design',n:'3ds Max',e:'Autodesk 3ds Max',d:'三维建模与渲染，常用于建筑表现',p:'W',u:'https://www.autodesk.com/products/3ds-max/',dom:'autodesk.com'},
+  {c:'design',n:'ZBrush',e:'ZBrush',d:'数字雕刻与高精度建模',p:'WM',u:'https://www.maxon.net/en/zbrush',dom:'maxon.net'},
+  {c:'design',n:'Pixso',e:'Pixso',d:'万兴旗下的在线协作 UI 设计',p:'WM',u:'https://pixso.cn/',dom:'pixso.cn'},
+  {c:'design',n:'即时设计',e:'JS Design',d:'国产在线 UI 协作设计工具',p:'WM',u:'https://js.design/',dom:'js.design'},
+  {c:'design',n:'MasterGo',e:'MasterGo',d:'蓝湖团队的在线产品设计协作',p:'WM',u:'https://mastergo.com/',dom:'mastergo.com'},
+  {c:'design',n:'Motiff',e:'Motiff',d:'AI 驱动的界面设计工具',p:'WM',u:'https://www.motiff.com/',dom:'motiff.com'},
+  {c:'design',n:'稿定设计',e:'Gaoding',d:'模板化在线设计与图片编辑',p:'WM',u:'https://www.gaoding.com/',dom:'gaoding.com'},
+  {c:'design',n:'创客贴',e:'Chuangkit',d:'在线平面设计与模板制作',p:'WM',u:'https://www.chuangkit.com/',dom:'chuangkit.com'},
+  {c:'design',n:'Fotor',e:'Fotor',d:'在线图片编辑与拼图设计',p:'WM',u:'https://www.fotor.com/',dom:'fotor.com'},
+  {c:'design',n:'Eagle',e:'Eagle',d:'设计师素材收集与管理',p:'WM',u:'https://www.eagle.cool/',dom:'eagle.cool'},
+  {c:'design',n:'Billfish',e:'Billfish',d:'免费的图片素材管理工具',p:'WM',u:'https://www.billfish.cn/',dom:'billfish.cn'},
+  {c:'design',n:'Framer',e:'Framer',d:'可视化建站与原型设计',p:'WM',u:'https://www.framer.com/',dom:'framer.com'},
+  {c:'design',n:'蓝湖',e:'Lanhu',d:'设计图交付与标注协作平台',p:'WM',u:'https://lanhuapp.com/',dom:'lanhuapp.com'},
+  {c:'design',n:'Lunacy',e:'Lunacy',d:'Icons8 出品的免费 UI 设计工具',p:'WML',u:'https://icons8.com/lunacy',dom:'icons8.com'},
+  {c:'design',n:'Photopea',e:'Photopea',d:'网页版免费 Photoshop 替代',p:'WM',u:'https://www.photopea.com/',dom:'photopea.com'},
+  {c:'design',n:'MediBang Paint',e:'MediBang Paint',d:'免费的漫画插画绘画软件',p:'WM',u:'https://medibangpaint.com/',dom:'medibangpaint.com'},
+  {c:'design',n:'FireAlpaca',e:'FireAlpaca',d:'免费轻量的绘画软件',p:'WM',u:'https://firealpaca.com/',dom:'firealpaca.com'},
+  {c:'design',n:'SAI',e:'PaintTool SAI',d:'日系轻量绘画软件',p:'W',u:'https://www.systemax.jp/en/sai/',dom:'systemax.jp'},
+  {c:'design',n:'Camtasia',e:'Camtasia',d:'TechSmith 的录屏与视频剪辑',p:'WM',u:'https://www.techsmith.com/camtasia.html',dom:'techsmith.com'},
+  {c:'design',n:'Bandicam',e:'Bandicam',d:'Bandisoft 出品的屏幕录制',p:'W',u:'https://www.bandicam.com/',dom:'bandicam.com'},
+  {c:'design',n:'EV 录屏',e:'EV Screen Recorder',d:'国产免费无水印录屏',p:'WM',u:'https://www.ieway.cn/',dom:'ieway.cn'},
+  {c:'design',n:'ScreenToGif',e:'ScreenToGif',d:'开源录屏与 GIF 制作',p:'W',u:'https://www.screentogif.com/',dom:'screentogif.com'},
+  {c:'design',n:'Shotcut',e:'Shotcut',d:'开源免费的视频剪辑软件',p:'WML',u:'https://shotcut.org/',dom:'shotcut.org'},
+  {c:'design',n:'Kdenlive',e:'Kdenlive',d:'KDE 社区的开源视频剪辑',p:'WML',u:'https://kdenlive.org/',dom:'kdenlive.org'},
+  {c:'design',n:'OpenShot',e:'OpenShot',d:'开源易用的视频剪辑',p:'WML',u:'https://www.openshot.org/',dom:'openshot.org'},
+  {c:'design',n:'Clipchamp',e:'Clipchamp',d:'微软的在线视频剪辑工具',p:'W',u:'https://clipchamp.com/',dom:'clipchamp.com'},
+  {c:'design',n:'Lightworks',e:'Lightworks',d:'专业级视频剪辑，免费版可用',p:'WML',u:'https://lwks.com/',dom:'lwks.com'},
+  {c:'design',n:'万彩动画大师',e:'Animiz',d:'国产 MG 动画制作软件',p:'W',u:'https://www.animiz.cn/',dom:'animiz.cn'},
+  {c:'design',n:'字由',e:'HelloFont',d:'设计师字体管理与试用',p:'WM',u:'https://www.hellofont.cn/',dom:'hellofont.cn'},
+  {c:'design',n:'Godot',e:'Godot Engine',d:'开源免费的跨平台游戏引擎',p:'WML',u:'https://godotengine.org/',dom:'godotengine.org'},
+  {c:'design',n:'GameMaker',e:'GameMaker',d:'面向 2D 游戏的开发引擎',p:'WM',u:'https://gamemaker.io/',dom:'gamemaker.io'},
+  {c:'design',n:'Cocos',e:'Cocos Creator',d:'国产跨平台游戏开发引擎',p:'WM',u:'https://www.cocos.com/',dom:'cocos.com'},
+  {c:'design',n:'Axure RP',e:'Axure RP',d:'专业原型设计与交互文档工具',p:'WM',u:'https://www.axure.com/',dom:'axure.com'},
+  {c:'design',n:'墨刀',e:'MockingBot',d:'国产原型设计与协作平台',p:'WML',u:'https://modao.cc/',dom:'modao.cc'},
+  {c:'design',n:'摹客',e:'Mockplus',d:'原型设计、标注与协作平台',p:'WML',u:'https://www.mockplus.cn/',dom:'mockplus.cn'},
+  {c:'design',n:'Balsamiq',e:'Balsamiq Wireframes',d:'手绘风格线框图原型工具',p:'WML',u:'https://balsamiq.com/',dom:'balsamiq.com'},
+  {c:'design',n:'Whimsical',e:'Whimsical',d:'流程图、线框图与文档协作',p:'WML',u:'https://whimsical.com/',dom:'whimsical.com'},
+  {c:'design',n:'ProtoPie',e:'ProtoPie',d:'高保真交互原型制作工具',p:'WM',u:'https://www.protopie.io/',dom:'protopie.io'},
+  {c:'design',n:'Houdini',e:'Houdini',d:'SideFX 程序化三维特效软件',p:'WML',u:'https://www.sidefx.com/',dom:'sidefx.com'},
+  {c:'design',n:'Nuke',e:'Nuke',d:'Foundry 节点式影视合成软件',p:'WML',u:'https://www.foundry.com/products/nuke',dom:'foundry.com'},
+  {c:'design',n:'Toon Boom',e:'Toon Boom Harmony',d:'专业二维动画制作软件',p:'WM',u:'https://www.toonboom.com/',dom:'toonboom.com'},
+  {c:'design',n:'Live2D',e:'Live2D Cubism',d:'二维图像动态化建模工具',p:'WM',u:'https://www.live2d.com/',dom:'live2d.com'},
+  {c:'design',n:'会声会影',e:'Corel VideoStudio',d:'Corel 家用视频剪辑软件',p:'W',u:'https://www.videostudiopro.com/',dom:'videostudiopro.com'},
+  {c:'design',n:'Vegas Pro',e:'VEGAS Pro',d:'专业音视频非线性编辑软件',p:'W',u:'https://www.vegascreativesoftware.com/',dom:'vegascreativesoftware.com'},
+  {c:'design',n:'Final Cut Pro',e:'Final Cut Pro',d:'Apple 专业视频剪辑软件',p:'M',u:'https://www.apple.com/final-cut-pro/',dom:'apple.com'},
+  {c:'design',n:'EDIUS',e:'EDIUS',d:'Grass Valley 广播级剪辑软件',p:'W',u:'https://www.grassvalley.com/',dom:'grassvalley.com'},
+
+  /* ── 影音播放与转换 ── */
+  {c:'media',n:'VLC 播放器',e:'VLC media player',d:'开源全能播放器，格式支持极广',p:'WML',u:'https://www.videolan.org/',dom:'videolan.org'},
+  {c:'media',n:'PotPlayer',e:'PotPlayer',d:'韩国 Daum 出品的高性能本地播放器',p:'W',u:'https://potplayer.daum.net/',dom:'potplayer.daum.net'},
+  {c:'media',n:'IINA',e:'IINA',d:'macOS 原生现代媒体播放器',p:'M',u:'https://iina.io/',dom:'iina.io'},
+  {c:'media',n:'foobar2000',e:'foobar2000',d:'高自由度、低占用的音频播放器',p:'W',u:'https://www.foobar2000.org/',dom:'foobar2000.org'},
+  {c:'media',n:'AIMP',e:'AIMP',d:'轻量好用的音频播放器',p:'W',u:'https://www.aimp.ru/',dom:'aimp.ru'},
+  {c:'media',n:'HandBrake',e:'HandBrake',d:'开源视频转码与压缩工具',p:'WML',u:'https://handbrake.fr/',dom:'handbrake.fr'},
+  {c:'media',n:'格式工厂',e:'Format Factory',d:'全能音视频与文档格式转换',p:'W',u:'https://www.pcfreetime.com/',dom:'pcfreetime.com'},
+  {c:'media',n:'Audacity',e:'Audacity',d:'开源音频录制与编辑软件',p:'WML',u:'https://www.audacityteam.org/',dom:'audacityteam.org'},
+  {c:'media',n:'网易云音乐',e:'NetEase Cloud Music',d:'国内音乐播放与歌单社区',p:'WM',u:'https://music.163.com/',dom:'music.163.com'},
+  {c:'media',n:'QQ 音乐',e:'QQ Music',d:'腾讯音乐流媒体平台',p:'WM',u:'https://y.qq.com/',dom:'y.qq.com'},
+  {c:'media',n:'Spotify',e:'Spotify',d:'全球流媒体音乐服务',p:'WML',u:'https://www.spotify.com/',dom:'spotify.com',note:1},
+  {c:'media',n:'MPC-HC',e:'MPC-HC',d:'经典轻量的 Windows 播放器',p:'W',u:'https://github.com/clsid2/mpc-hc',dom:'github.com'},
+  {c:'media',n:'mpv',e:'mpv',d:'开源跨平台的命令行播放器',p:'WML',u:'https://mpv.io/',dom:'mpv.io'},
+  {c:'media',n:'SMPlayer',e:'SMPlayer',d:'内置解码器的开源播放器',p:'WML',u:'https://www.smplayer.info/',dom:'smplayer.info'},
+  {c:'media',n:'KMPlayer',e:'KMPlayer',d:'韩国老牌多媒体播放器',p:'W',u:'https://www.kmplayer.com/',dom:'kmplayer.com'},
+  {c:'media',n:'千千音乐',e:'Qianqian Music',d:'太合音乐旗下的本地音乐播放器',p:'W',u:'https://music.taihe.com/',dom:'taihe.com'},
+  {c:'media',n:'酷狗音乐',e:'Kugou Music',d:'国内主流音乐播放平台',p:'W',u:'https://www.kugou.com/',dom:'kugou.com'},
+  {c:'media',n:'酷我音乐',e:'Kuwo Music',d:'国内主流音乐播放平台',p:'W',u:'https://www.kuwo.cn/',dom:'kuwo.cn'},
+  {c:'media',n:'iTunes',e:'iTunes',d:'苹果媒体播放与设备管理',p:'WM',u:'https://www.apple.com/itunes/',dom:'apple.com'},
+  {c:'media',n:'喜马拉雅',e:'Ximalaya',d:'国内最大的有声书与播客平台',p:'WM',u:'https://www.ximalaya.com/',dom:'ximalaya.com'},
+  {c:'media',n:'恒星播放器',e:'Stellar Player',d:'国产全能视频播放器',p:'W',u:'https://www.stellarplayer.com/',dom:'stellarplayer.com'},
+  {c:'media',n:'ShanaEncoder',e:'ShanaEncoder',d:'基于 FFmpeg 的高效转码器',p:'W',u:'https://www.shanainc.com/',dom:'shanainc.com'},
+  {c:'media',n:'FFmpeg',e:'FFmpeg',d:'开源音视频处理瑞士军刀',p:'WML',u:'https://ffmpeg.org/',dom:'ffmpeg.org'},
+  {c:'media',n:'洛雪音乐助手',e:'LX Music',d:'开源跨平台音乐播放器',p:'WML',u:'https://github.com/lyswhut/lx-music-desktop',dom:'github.com'},
+  {c:'media',n:'Kodi',e:'Kodi',d:'开源家庭影院媒体中心',p:'WML',u:'https://kodi.tv/',dom:'kodi.tv'},
+  {c:'media',n:'Plex',e:'Plex',d:'个人媒体库与串流服务',p:'WML',u:'https://www.plex.tv/',dom:'plex.tv'},
+  {c:'media',n:'Emby',e:'Emby',d:'可自建的媒体服务器',p:'WML',u:'https://emby.media/',dom:'emby.media'},
+  {c:'media',n:'Jellyfin',e:'Jellyfin',d:'开源免费的媒体服务器',p:'WML',u:'https://jellyfin.org/',dom:'jellyfin.org'},
+  {c:'media',n:'GOM Player',e:'GOM Player',d:'韩国老牌多媒体播放器',p:'W',u:'https://www.gomlab.com/',dom:'gomlab.com'},
+  {c:'media',n:'FL Studio',e:'FL Studio',d:'水果编曲，流行音乐制作 DAW',p:'WM',u:'https://www.image-line.com/fl-studio/',dom:'image-line.com'},
+  {c:'media',n:'Ableton Live',e:'Ableton Live',d:'电子音乐制作与现场演出',p:'WM',u:'https://www.ableton.com/',dom:'ableton.com'},
+  {c:'media',n:'Logic Pro',e:'Logic Pro',d:'苹果的专业音乐制作软件',p:'M',u:'https://www.apple.com/logic-pro/',dom:'apple.com'},
+  {c:'media',n:'Cubase',e:'Cubase',d:'Steinberg 的专业编曲宿主',p:'WM',u:'https://www.steinberg.net/',dom:'steinberg.net'},
+  {c:'media',n:'MuseScore',e:'MuseScore',d:'开源免费的打谱软件',p:'WML',u:'https://musescore.org/',dom:'musescore.org'},
+  {c:'media',n:'GoldWave',e:'GoldWave',d:'经典音频编辑与处理',p:'W',u:'https://www.goldwave.com/',dom:'goldwave.com'},
+  {c:'media',n:'LosslessCut',e:'LosslessCut',d:'开源无损视频快速剪切',p:'WML',u:'https://github.com/mifi/lossless-cut',dom:'github.com'},
+  {c:'media',n:'Reaper',e:'REAPER',d:'轻量专业的数字音频工作站',p:'WML',u:'https://www.reaper.fm/',dom:'reaper.fm'},
+  {c:'media',n:'Studio One',e:'Studio One',d:'PreSonus 音乐制作 DAW',p:'WM',u:'https://www.presonus.com/',dom:'presonus.com'},
+  {c:'media',n:'Reason',e:'Reason',d:'Reason Studios 音乐创作软件',p:'WM',u:'https://www.reasonstudios.com/',dom:'reasonstudios.com'},
+
+  /* ── 沟通与协作 ── */
+  {c:'comm',n:'微信',e:'WeChat',d:'国民级即时通讯与生活服务入口',p:'WM',u:'https://weixin.qq.com/',dom:'weixin.qq.com'},
+  {c:'comm',n:'QQ',e:'QQ',d:'腾讯即时通讯与群组服务',p:'WM',u:'https://im.qq.com/',dom:'im.qq.com'},
+  {c:'comm',n:'钉钉',e:'DingTalk',d:'阿里出品的企业协同与办公平台',p:'WM',u:'https://www.dingtalk.com/',dom:'dingtalk.com'},
+  {c:'comm',n:'飞书',e:'Feishu',d:'字节跳动的协作、文档与会议平台',p:'WM',u:'https://www.feishu.cn/',dom:'feishu.cn'},
+  {c:'comm',n:'企业微信',e:'WeCom',d:'连接企业内部与客户的协同工具',p:'WM',u:'https://work.weixin.qq.com/',dom:'work.weixin.qq.com'},
+  {c:'comm',n:'腾讯会议',e:'Tencent Meeting',d:'国内常用的在线视频会议',p:'WM',u:'https://meeting.tencent.com/',dom:'meeting.tencent.com'},
+  {c:'comm',n:'Zoom',e:'Zoom',d:'国际通用的视频会议服务',p:'WML',u:'https://zoom.us/',dom:'zoom.us'},
+  {c:'comm',n:'Slack',e:'Slack',d:'以频道为核心的团队沟通工具',p:'WML',u:'https://slack.com/',dom:'slack.com'},
+  {c:'comm',n:'Microsoft Teams',e:'Microsoft Teams',d:'微软的聊天、会议与协作平台',p:'WML',u:'https://www.microsoft.com/microsoft-teams',dom:'microsoft.com'},
+  {c:'comm',n:'Discord',e:'Discord',d:'社群语音频道与即时聊天',p:'WML',u:'https://discord.com/',dom:'discord.com',note:1},
+  {c:'comm',n:'Telegram',e:'Telegram',d:'注重速度与加密的云消息应用',p:'WML',u:'https://telegram.org/',dom:'telegram.org',note:1},
+  {c:'comm',n:'WhatsApp',e:'WhatsApp',d:'全球广泛使用的即时通讯应用',p:'WM',u:'https://www.whatsapp.com/',dom:'whatsapp.com',note:1},
+  {c:'comm',n:'Thunderbird',e:'Mozilla Thunderbird',d:'开源跨平台邮件客户端',p:'WML',u:'https://www.thunderbird.net/',dom:'thunderbird.net'},
+  {c:'comm',n:'Skype',e:'Skype',d:'微软的老牌网络电话与会议',p:'WML',u:'https://www.skype.com/',dom:'skype.com'},
+  {c:'comm',n:'LINE',e:'LINE',d:'日韩主流的即时通讯应用',p:'WM',u:'https://line.me/',dom:'line.me',note:1},
+  {c:'comm',n:'KOOK',e:'KOOK',d:'国产语音开黑与社群工具',p:'WM',u:'https://www.kookapp.cn/',dom:'kookapp.cn'},
+  {c:'comm',n:'YY 语音',e:'YY',d:'国内老牌语音直播平台',p:'W',u:'https://www.yy.com/',dom:'yy.com'},
+  {c:'comm',n:'Outlook',e:'Microsoft Outlook',d:'微软邮件与日程管理客户端',p:'WM',u:'https://www.microsoft.com/microsoft-365/outlook',dom:'microsoft.com'},
+  {c:'comm',n:'Foxmail',e:'Foxmail',d:'腾讯出品的经典邮件客户端',p:'W',u:'https://www.foxmail.com/',dom:'foxmail.com'},
+  {c:'comm',n:'网易邮箱大师',e:'Mail Master',d:'网易的全平台邮件客户端',p:'WM',u:'https://dashi.163.com/',dom:'163.com'},
+  {c:'comm',n:'Signal',e:'Signal',d:'端到端加密的私密通讯应用',p:'WML',u:'https://signal.org/',dom:'signal.org',note:1},
+  {c:'comm',n:'Webex',e:'Webex',d:'Cisco 企业视频会议与协作',p:'WML',u:'https://www.webex.com/',dom:'webex.com'},
+
+  /* ── 云盘与同步 ── */
+  {c:'cloud',n:'百度网盘',e:'Baidu Netdisk',d:'国内用户量最大的云存储服务',p:'WM',u:'https://pan.baidu.com/',dom:'pan.baidu.com'},
+  {c:'cloud',n:'阿里云盘',e:'Alibaba Cloud Drive',d:'阿里出品的个人云存储',p:'WM',u:'https://www.alipan.com/',dom:'alipan.com'},
+  {c:'cloud',n:'腾讯微云',e:'Weiyun',d:'腾讯云存储与文件同步',p:'WM',u:'https://www.weiyun.com/',dom:'weiyun.com'},
+  {c:'cloud',n:'坚果云',e:'Nutstore',d:'国内老牌文件同步与协作网盘',p:'WML',u:'https://www.jianguoyun.com/',dom:'jianguoyun.com'},
+  {c:'cloud',n:'天翼云盘',e:'Tianyi Cloud',d:'中国电信的云存储服务',p:'WM',u:'https://cloud.189.cn/',dom:'cloud.189.cn'},
+  {c:'cloud',n:'OneDrive',e:'OneDrive',d:'微软云盘，与 Windows 深度集成',p:'WM',u:'https://onedrive.live.com/',dom:'onedrive.live.com'},
+  {c:'cloud',n:'Dropbox',e:'Dropbox',d:'国际主流文件同步与共享服务',p:'WML',u:'https://www.dropbox.com/',dom:'dropbox.com',note:1},
+  {c:'cloud',n:'Google Drive',e:'Google Drive',d:'谷歌云端硬盘与在线办公入口',p:'WM',u:'https://drive.google.com/',dom:'google.com',note:1},
+  {c:'cloud',n:'iCloud',e:'iCloud',d:'苹果账号的云存储与同步服务',p:'WM',u:'https://www.icloud.com/',dom:'icloud.com'},
+  {c:'cloud',n:'Syncthing',e:'Syncthing',d:'开源点对点文件同步工具',p:'WML',u:'https://syncthing.net/',dom:'syncthing.net'},
+  {c:'cloud',n:'Nextcloud',e:'Nextcloud',d:'可自建的私有云盘与协作套件',p:'WML',u:'https://nextcloud.com/',dom:'nextcloud.com'},
+  {c:'cloud',n:'夸克网盘',e:'Quark Drive',d:'阿里旗下的年轻态云盘',p:'WM',u:'https://pan.quark.cn/',dom:'quark.cn'},
+  {c:'cloud',n:'123 云盘',e:'123Pan',d:'不限速的新兴云盘',p:'WM',u:'https://www.123pan.com/',dom:'123pan.com'},
+  {c:'cloud',n:'移动云盘',e:'China Mobile Cloud',d:'中国移动的云存储服务',p:'WM',u:'https://yun.139.com/',dom:'139.com'},
+  {c:'cloud',n:'MEGA',e:'MEGA',d:'主打端到端加密的云盘',p:'WML',u:'https://mega.io/',dom:'mega.io'},
+  {c:'cloud',n:'pCloud',e:'pCloud',d:'瑞士的终身制云存储服务',p:'WML',u:'https://www.pcloud.com/',dom:'pcloud.com'},
+  {c:'cloud',n:'115 网盘',e:'115 Netdisk',d:'老牌大容量云存储服务',p:'WM',u:'https://115.com/',dom:'115.com'},
+  {c:'cloud',n:'蓝奏云',e:'Lanzou Cloud',d:'常用的小文件分享网盘',p:'WM',u:'https://www.lanzou.com/',dom:'lanzou.com'},
+  {c:'cloud',n:'奶牛快传',e:'CowTransfer',d:'大文件快速传输服务',p:'WM',u:'https://cowtransfer.com/',dom:'cowtransfer.com'},
+  {c:'cloud',n:'文叔叔',e:'WenShuShu',d:'免登录的大文件传输',p:'WM',u:'https://www.wenshushu.cn/',dom:'wenshushu.cn'},
+  {c:'cloud',n:'LocalSend',e:'LocalSend',d:'开源局域网跨设备传文件',p:'WML',u:'https://localsend.org/',dom:'localsend.org'},
+  {c:'cloud',n:'Resilio Sync',e:'Resilio Sync',d:'点对点文件同步与分发',p:'WML',u:'https://www.resilio.com/',dom:'resilio.com'},
+  {c:'cloud',n:'FreeFileSync',e:'FreeFileSync',d:'开源文件夹对比与同步',p:'WML',u:'https://freefilesync.org/',dom:'freefilesync.org'},
+  {c:'cloud',n:'GoodSync',e:'GoodSync',d:'商业级文件同步与备份',p:'WML',u:'https://www.goodsync.com/',dom:'goodsync.com'},
+  {c:'cloud',n:'WeTransfer',e:'WeTransfer',d:'大文件在线传输服务',p:'WML',u:'https://wetransfer.com/',dom:'wetransfer.com'},
+  {c:'cloud',n:'AirDroid',e:'AirDroid',d:'安卓设备无线管理与文件传输',p:'WML',u:'https://www.airdroid.com/',dom:'airdroid.com'},
+  {c:'cloud',n:'亿方云',e:'FangCloud',d:'企业级文件云存储与协作',p:'WML',u:'https://www.fangcloud.com/',dom:'fangcloud.com'},
+  {c:'cloud',n:'城通网盘',e:'ctfile',d:'国内文件存储与分享网盘',p:'WML',u:'https://www.ctfile.com/',dom:'ctfile.com'},
+
+  /* ── 安全与隐私 ── */
+  {c:'sec',n:'火绒安全软件',e:'Huorong Security',d:'轻量低打扰的国产安全软件',p:'W',u:'https://www.huorong.cn/',dom:'huorong.cn'},
+  {c:'sec',n:'360 安全卫士',e:'360 Total Security',d:'国内综合型系统安全与优化工具',p:'WM',u:'https://weishi.360.cn/',dom:'360.cn'},
+  {c:'sec',n:'腾讯电脑管家',e:'Tencent PC Manager',d:'腾讯安全防护与系统管理工具',p:'W',u:'https://guanjia.qq.com/',dom:'qq.com'},
+  {c:'sec',n:'Malwarebytes',e:'Malwarebytes',d:'专注反恶意软件的安全工具',p:'WM',u:'https://www.malwarebytes.com/',dom:'malwarebytes.com'},
+  {c:'sec',n:'Avast',e:'Avast',d:'提供免费版的国际杀毒软件',p:'WM',u:'https://www.avast.com/',dom:'avast.com'},
+  {c:'sec',n:'Bitdefender',e:'Bitdefender',d:'评测表现优异的国际安全软件',p:'WM',u:'https://www.bitdefender.com/',dom:'bitdefender.com'},
+  {c:'sec',n:'ESET',e:'ESET NOD32',d:'轻量高效的杀毒软件',p:'WM',u:'https://www.eset.com/',dom:'eset.com'},
+  {c:'sec',n:'卡巴斯基',e:'Kaspersky',d:'国际知名安全软件厂商',p:'WM',u:'https://www.kaspersky.com/',dom:'kaspersky.com'},
+  {c:'sec',n:'1Password',e:'1Password',d:'团队与个人密码管理器',p:'WML',u:'https://1password.com/',dom:'1password.com'},
+  {c:'sec',n:'Bitwarden',e:'Bitwarden',d:'开源免费密码管理器',p:'WML',u:'https://bitwarden.com/',dom:'bitwarden.com'},
+  {c:'sec',n:'KeePass',e:'KeePass',d:'本地存储的开源密码库',p:'WML',u:'https://keepass.info/',dom:'keepass.info'},
+  {c:'sec',n:'VeraCrypt',e:'VeraCrypt',d:'开源磁盘加密工具',p:'WML',u:'https://www.veracrypt.fr/',dom:'veracrypt.fr'},
+  {c:'sec',n:'360 杀毒',e:'360 Antivirus',d:'360 出品的免费杀毒软件',p:'W',u:'https://sd.360.cn/',dom:'360.cn'},
+  {c:'sec',n:'金山毒霸',e:'Kingsoft Antivirus',d:'金山出品的老牌杀毒软件',p:'W',u:'https://www.ijinshan.com/',dom:'ijinshan.com'},
+  {c:'sec',n:'瑞星杀毒',e:'Rising Antivirus',d:'国产老牌杀毒软件',p:'W',u:'https://www.rising.com.cn/',dom:'rising.com.cn'},
+  {c:'sec',n:'Norton',e:'Norton',d:'国际知名杀毒与安全套件',p:'WM',u:'https://www.norton.com/',dom:'norton.com'},
+  {c:'sec',n:'McAfee',e:'McAfee',d:'国际知名安全防护软件',p:'WM',u:'https://www.mcafee.com/',dom:'mcafee.com'},
+  {c:'sec',n:'AdGuard',e:'AdGuard',d:'全平台的广告拦截与隐私保护',p:'WM',u:'https://adguard.com/',dom:'adguard.com'},
+  {c:'sec',n:'KeePassXC',e:'KeePassXC',d:'KeePass 的跨平台社区版',p:'WML',u:'https://keepassxc.org/',dom:'keepassxc.org'},
+  {c:'sec',n:'OpenVPN',e:'OpenVPN',d:'开源 VPN 协议与客户端',p:'WML',u:'https://openvpn.net/',dom:'openvpn.net'},
+  {c:'sec',n:'WireGuard',e:'WireGuard',d:'新一代轻量 VPN 协议',p:'WML',u:'https://www.wireguard.com/',dom:'wireguard.com'},
+  {c:'sec',n:'Proton VPN',e:'Proton VPN',d:'瑞士的隐私 VPN 服务',p:'WM',u:'https://protonvpn.com/',dom:'protonvpn.com',note:1},
+  {c:'sec',n:'NordVPN',e:'NordVPN',d:'国际主流 VPN 服务',p:'WM',u:'https://nordvpn.com/',dom:'nordvpn.com',note:1},
+  {c:'sec',n:'AVG',e:'AVG Antivirus',d:'知名杀毒软件（Gen Digital 旗下）',p:'W',u:'https://www.avg.com/',dom:'avg.com'},
+  {c:'sec',n:'趋势科技',e:'Trend Micro',d:'企业级网络安全解决方案',p:'WML',u:'https://www.trendmicro.com/',dom:'trendmicro.com'},
+  {c:'sec',n:'Sophos',e:'Sophos',d:'企业终端安全与防护',p:'WML',u:'https://www.sophos.com/',dom:'sophos.com'},
+  {c:'sec',n:'Emsisoft',e:'Emsisoft',d:'反恶意软件与杀毒工具',p:'W',u:'https://www.emsisoft.com/',dom:'emsisoft.com'},
+
+  /* ── 压缩与解压 ── */
+  {c:'zip',n:'WinRAR',e:'WinRAR',d:'老牌压缩软件，RAR 格式官方工具',p:'W',u:'https://www.rarlab.com/',dom:'rarlab.com'},
+  {c:'zip',n:'7-Zip',e:'7-Zip',d:'开源、高压缩比、无广告',p:'W',u:'https://www.7-zip.org/',dom:'7-zip.org'},
+  {c:'zip',n:'Bandizip',e:'Bandizip',d:'韩国出品的轻量压缩工具',p:'WM',u:'https://www.bandisoft.com/',dom:'bandisoft.com'},
+  {c:'zip',n:'WinZip',e:'WinZip',d:'经典商业压缩与解压软件',p:'WM',u:'https://www.winzip.com/',dom:'winzip.com'},
+  {c:'zip',n:'Keka',e:'Keka',d:'macOS 上的压缩与解压工具',p:'M',u:'https://www.keka.io/',dom:'keka.io'},
+  {c:'zip',n:'The Unarchiver',e:'The Unarchiver',d:'macOS 多格式解压工具',p:'M',u:'https://theunarchiver.com/',dom:'theunarchiver.com'},
+  {c:'zip',n:'PeaZip',e:'PeaZip',d:'开源跨平台的压缩解压工具',p:'WL',u:'https://peazip.github.io/',dom:'peazip.github.io'},
+  {c:'zip',n:'NanaZip',e:'NanaZip',d:'7-Zip 的 Windows 11 风格衍生版',p:'W',u:'https://github.com/M2Team/NanaZip',dom:'github.com'},
+
+  /* ── 系统与驱动 ── */
+  {c:'sys',n:'Everything',e:'Everything',d:'毫秒级文件名搜索工具',p:'W',u:'https://www.voidtools.com/',dom:'voidtools.com'},
+  {c:'sys',n:'Listary',e:'Listary',d:'全局快速搜索与启动工具',p:'W',u:'https://www.listary.com/',dom:'listary.com'},
+  {c:'sys',n:'CCleaner',e:'CCleaner',d:'系统清理与优化工具',p:'WM',u:'https://www.ccleaner.com/',dom:'ccleaner.com'},
+  {c:'sys',n:'Geek Uninstaller',e:'Geek Uninstaller',d:'轻量的彻底卸载工具',p:'W',u:'https://geekuninstaller.com/',dom:'geekuninstaller.com'},
+  {c:'sys',n:'Revo Uninstaller',e:'Revo Uninstaller',d:'强力卸载并清理残留',p:'W',u:'https://www.revouninstaller.com/',dom:'revouninstaller.com'},
+  {c:'sys',n:'Rufus',e:'Rufus',d:'轻量 USB 启动盘制作工具',p:'W',u:'https://rufus.ie/',dom:'rufus.ie'},
+  {c:'sys',n:'Ventoy',e:'Ventoy',d:'一个 U 盘装多个系统镜像',p:'WL',u:'https://www.ventoy.net/',dom:'ventoy.net'},
+  {c:'sys',n:'CPU-Z',e:'CPU-Z',d:'CPU、主板与内存信息检测',p:'W',u:'https://www.cpuid.com/',dom:'cpuid.com'},
+  {c:'sys',n:'GPU-Z',e:'GPU-Z',d:'显卡参数与状态检测',p:'W',u:'https://www.techpowerup.com/gpuz/',dom:'techpowerup.com'},
+  {c:'sys',n:'AIDA64',e:'AIDA64',d:'硬件检测、诊断与压力测试',p:'W',u:'https://www.aida64.com/',dom:'aida64.com'},
+  {c:'sys',n:'CrystalDiskInfo',e:'CrystalDiskInfo',d:'硬盘健康状态监测',p:'W',u:'https://crystalmark.info/',dom:'crystalmark.info'},
+  {c:'sys',n:'TreeSize',e:'TreeSize',d:'磁盘空间占用分析与管理',p:'W',u:'https://www.jam-software.com/treesize',dom:'jam-software.com'},
+  {c:'sys',n:'Driver Booster',e:'Driver Booster',d:'IObit 出品的驱动更新工具',p:'W',u:'https://www.iobit.com/',dom:'iobit.com'},
+  {c:'sys',n:'驱动人生',e:'Driver Life',d:'国内常用的驱动检测与安装',p:'W',u:'https://www.160.com/',dom:'160.com'},
+  {c:'sys',n:'Notepad++',e:'Notepad++',d:'开源轻量文本与代码编辑器',p:'W',u:'https://notepad-plus-plus.org/',dom:'notepad-plus-plus.org'},
+  {c:'sys',n:'PowerToys',e:'PowerToys',d:'微软官方 Windows 效率工具集',p:'W',u:'https://github.com/microsoft/PowerToys',dom:'github.com'},
+  {c:'sys',n:'AutoHotkey',e:'AutoHotkey',d:'Windows 脚本自动化工具',p:'W',u:'https://www.autohotkey.com/',dom:'autohotkey.com'},
+  {c:'sys',n:'PowerISO',e:'PowerISO',d:'镜像制作、挂载与虚拟光驱',p:'W',u:'https://www.poweriso.com/',dom:'poweriso.com'},
+  {c:'sys',n:'balenaEtcher',e:'balenaEtcher',d:'跨平台镜像写入 U 盘工具',p:'WML',u:'https://www.balena.io/etcher/',dom:'balena.io'},
+  {c:'sys',n:'CleanMyMac',e:'CleanMyMac',d:'macOS 系统清理与优化',p:'M',u:'https://macpaw.com/cleanmymac',dom:'macpaw.com'},
+  {c:'sys',n:'iStat Menus',e:'iStat Menus',d:'macOS 菜单栏系统监控',p:'M',u:'https://bjango.com/mac/istatmenus/',dom:'bjango.com'},
+  {c:'sys',n:'Rectangle',e:'Rectangle',d:'macOS 窗口快捷分屏工具',p:'M',u:'https://rectangleapp.com/',dom:'rectangleapp.com'},
+  {c:'sys',n:'DiskGenius',e:'DiskGenius',d:'分区管理、数据恢复与磁盘工具',p:'W',u:'https://www.diskgenius.cn/',dom:'diskgenius.cn'},
+  {c:'sys',n:'Dism++',e:'Dism++',d:'Windows 系统精简与优化工具',p:'W',u:'https://github.com/Chuyu-Team/Dism-Multi-language',dom:'github.com'},
+  {c:'sys',n:'WizTree',e:'WizTree',d:'极速磁盘空间分析工具',p:'W',u:'https://www.diskanalyzer.com/',dom:'diskanalyzer.com'},
+  {c:'sys',n:'Recuva',e:'Recuva',d:'CCleaner 团队的免费数据恢复',p:'W',u:'https://www.ccleaner.com/recuva',dom:'ccleaner.com'},
+  {c:'sys',n:'EaseUS',e:'EaseUS Data Recovery',d:'易我科技的数据恢复软件',p:'W',u:'https://www.easeus.com/',dom:'easeus.com'},
+  {c:'sys',n:'傲梅分区助手',e:'AOMEI Partition Assistant',d:'免费的磁盘分区管理工具',p:'W',u:'https://www.disktool.cn/',dom:'disktool.cn'},
+  {c:'sys',n:'Macrium Reflect',e:'Macrium Reflect',d:'系统备份与磁盘克隆',p:'W',u:'https://www.macrium.com/',dom:'macrium.com'},
+  {c:'sys',n:'微PE工具箱',e:'WePE',d:'干净无捆绑的 WinPE 启动盘',p:'W',u:'https://www.wepe.com.cn/',dom:'wepe.com.cn'},
+  {c:'sys',n:'优启通',e:'EasyU',d:'IT 天空出品的 PE 启动工具',p:'W',u:'https://www.uqitong.com/',dom:'uqitong.com'},
+  {c:'sys',n:'HWiNFO',e:'HWiNFO',d:'详尽的硬件信息检测与监控',p:'W',u:'https://www.hwinfo.com/',dom:'hwinfo.com'},
+  {c:'sys',n:'HWMonitor',e:'HWMonitor',d:'CPUID 出品的硬件温度监控',p:'W',u:'https://www.cpuid.com/softwares/hwmonitor.html',dom:'cpuid.com'},
+  {c:'sys',n:'MSI Afterburner',e:'MSI Afterburner',d:'显卡超频与风扇控制',p:'W',u:'https://www.msi.com/Landing/afterburner',dom:'msi.com'},
+  {c:'sys',n:'Core Temp',e:'Core Temp',d:'CPU 温度实时监控',p:'W',u:'https://www.alcpu.com/CoreTemp/',dom:'alcpu.com'},
+  {c:'sys',n:'鲁大师',e:'Master Lu',d:'硬件检测、跑分与驱动管理',p:'W',u:'https://www.ludashi.com/',dom:'ludashi.com'},
+  {c:'sys',n:'图吧工具箱',e:'Tuba Toolbox',d:'硬件检测与烤机工具合集',p:'W',u:'https://www.tbtool.cn/',dom:'tbtool.cn'},
+  {c:'sys',n:'TrafficMonitor',e:'TrafficMonitor',d:'任务栏网速与硬件占用显示',p:'W',u:'https://github.com/zhongyang219/TrafficMonitor',dom:'github.com'},
+  {c:'sys',n:'TranslucentTB',e:'TranslucentTB',d:'任务栏透明美化工具',p:'W',u:'https://github.com/TranslucentTB/TranslucentTB',dom:'github.com'},
+  {c:'sys',n:'StartAllBack',e:'StartAllBack',d:'Windows 开始菜单与任务栏增强',p:'W',u:'https://www.startallback.com/',dom:'startallback.com'},
+  {c:'sys',n:'ExplorerPatcher',e:'ExplorerPatcher',d:'开源 Windows 资源管理器定制',p:'W',u:'https://github.com/valinet/ExplorerPatcher',dom:'github.com'},
+  {c:'sys',n:'EarTrumpet',e:'EarTrumpet',d:'分应用音量调节工具',p:'W',u:'https://eartrumpet.app/',dom:'eartrumpet.app'},
+  {c:'sys',n:'Wallpaper Engine',e:'Wallpaper Engine',d:'Steam 上的动态壁纸神器',p:'W',u:'https://www.wallpaperengine.io/',dom:'wallpaperengine.io'},
+  {c:'sys',n:'Lively Wallpaper',e:'Lively Wallpaper',d:'开源免费的动态壁纸',p:'W',u:'https://rocksdanister.github.io/lively/',dom:'github.io'},
+  {c:'sys',n:'软媒魔方',e:'RuanMei Cube',d:'Windows 美化与系统工具集',p:'W',u:'https://mofang.ruanmei.com/',dom:'ruanmei.com'},
+  {c:'sys',n:'驱动精灵',e:'DriverGenius',d:'老牌驱动检测与更新工具',p:'W',u:'https://www.drivergenius.com/',dom:'drivergenius.com'},
+  {c:'sys',n:'Fan Control',e:'Fan Control',d:'开源机箱风扇曲线控制',p:'W',u:'https://github.com/Rem0o/FanControl.Releases',dom:'github.com'},
+  {c:'sys',n:'MemTest86',e:'MemTest86',d:'U 盘启动的内存检测工具',p:'W',u:'https://www.memtest86.com/',dom:'memtest86.com'},
+  {c:'sys',n:'HD Tune',e:'HD Tune',d:'硬盘检测与基准测试',p:'W',u:'https://www.hdtune.com/',dom:'hdtune.com'},
+  {c:'sys',n:'Glary Utilities',e:'Glary Utilities',d:'一站式系统清理优化套件',p:'W',u:'https://www.glarysoft.com/',dom:'glarysoft.com'},
+  {c:'sys',n:'Wise Care 365',e:'Wise Care 365',d:'系统清理与提速工具',p:'W',u:'https://www.wisecleaner.com/',dom:'wisecleaner.com'},
+  {c:'sys',n:'Flow Launcher',e:'Flow Launcher',d:'开源 Windows 快速启动器',p:'W',u:'https://www.flowlauncher.com/',dom:'flowlauncher.com'},
+  {c:'sys',n:'Rainmeter',e:'Rainmeter',d:'Windows 桌面美化与小组件',p:'W',u:'https://www.rainmeter.net/',dom:'rainmeter.net'},
+  {c:'sys',n:'Fences',e:'Fences',d:'Stardock 的桌面图标分区整理',p:'W',u:'https://www.stardock.com/products/fences/',dom:'stardock.com'},
+  {c:'sys',n:'Start11',e:'Start11',d:'Stardock 的开始菜单定制',p:'W',u:'https://www.stardock.com/products/start11/',dom:'stardock.com'},
+  {c:'sys',n:'QuickLook',e:'QuickLook',d:'空格键快速预览文件',p:'W',u:'https://github.com/QL-Win/QuickLook',dom:'github.com'},
+
+  /* ── 虚拟机与远程 ── */
+  {c:'vm',n:'VMware Workstation',e:'VMware Workstation Pro',d:'桌面级虚拟机（现由 Broadcom 提供）',p:'WL',u:'https://www.vmware.com/products/workstation-pro.html',dom:'vmware.com'},
+  {c:'vm',n:'VirtualBox',e:'VirtualBox',d:'开源免费的跨平台虚拟机，适合桌面虚拟化',p:'WML',u:'https://www.virtualbox.org/',dom:'virtualbox.org'},
+  {c:'vm',n:'Parallels Desktop',e:'Parallels Desktop',d:'在 Mac 上流畅运行 Windows',p:'M',u:'https://www.parallels.com/',dom:'parallels.com'},
+  {c:'vm',n:'UTM',e:'UTM',d:'Apple Silicon 上的虚拟机工具',p:'M',u:'https://mac.getutm.app/',dom:'getutm.app'},
+  {c:'vm',n:'TeamViewer',e:'TeamViewer',d:'跨平台远程控制与协作',p:'WML',u:'https://www.teamviewer.com/',dom:'teamviewer.com'},
+  {c:'vm',n:'AnyDesk',e:'AnyDesk',d:'低延迟轻量远程桌面',p:'WML',u:'https://anydesk.com/',dom:'anydesk.com'},
+  {c:'vm',n:'向日葵',e:'Sunlogin',d:'贝锐出品的国内远程控制',p:'WM',u:'https://sunlogin.oray.com/',dom:'sunlogin.oray.com'},
+  {c:'vm',n:'ToDesk',e:'ToDesk',d:'国内常用的远程桌面工具',p:'WML',u:'https://www.todesk.com/',dom:'todesk.com'},
+  {c:'vm',n:'RustDesk',e:'RustDesk',d:'开源可自建的远程桌面',p:'WML',u:'https://rustdesk.com/',dom:'rustdesk.com'},
+  {c:'vm',n:'Parsec',e:'Parsec',d:'低延迟游戏串流与远程桌面',p:'WM',u:'https://parsec.app/',dom:'parsec.app'},
+  {c:'vm',n:'QEMU',e:'QEMU',d:'开源硬件模拟与虚拟化',p:'WML',u:'https://www.qemu.org/',dom:'qemu.org'},
+  {c:'vm',n:'网易 MuMu 模拟器',e:'MuMu Player',d:'网易出品的安卓模拟器',p:'WM',u:'https://mumu.163.com/',dom:'163.com'},
+  {c:'vm',n:'雷电模拟器',e:'LDPlayer',d:'国内常用的安卓模拟器',p:'W',u:'https://www.ldmnq.com/',dom:'ldmnq.com'},
+  {c:'vm',n:'BlueStacks',e:'BlueStacks',d:'国际主流的安卓模拟器',p:'WM',u:'https://www.bluestacks.com/',dom:'bluestacks.com'},
+  {c:'vm',n:'夜神模拟器',e:'NoxPlayer',d:'老牌安卓模拟器',p:'WM',u:'https://www.yeshen.com/',dom:'yeshen.com'},
+  {c:'vm',n:'RayLink',e:'RayLink',d:'面向设计与游戏的远程桌面',p:'WM',u:'https://www.raylink.live/',dom:'raylink.live'},
+  {c:'vm',n:'Moonlight',e:'Moonlight',d:'开源游戏串流，搭配 Sunshine 使用',p:'WML',u:'https://moonlight-stream.org/',dom:'moonlight-stream.org'},
+  {c:'vm',n:'逍遥模拟器',e:'MEmu Play',d:'国内常用的安卓模拟器',p:'W',u:'https://www.xyaz.cn/',dom:'xyaz.cn'},
+  {c:'vm',n:'Genymotion',e:'Genymotion',d:'面向开发者的安卓模拟器',p:'WML',u:'https://www.genymotion.com/',dom:'genymotion.com'},
+
+  /* ── 输入法与翻译 ── */
+  {c:'ime',n:'搜狗输入法',e:'Sogou IME',d:'国内主流中文输入法',p:'WM',u:'https://shurufa.sogou.com/',dom:'sogou.com'},
+  {c:'ime',n:'百度输入法',e:'Baidu IME',d:'百度出品的中文输入法',p:'WM',u:'https://shurufa.baidu.com/',dom:'baidu.com'},
+  {c:'ime',n:'Rime 输入法',e:'Rime',d:'开源、跨平台、可深度定制',p:'WML',u:'https://rime.im/',dom:'rime.im'},
+  {c:'ime',n:'DeepL',e:'DeepL',d:'以自然度著称的机器翻译',p:'WM',u:'https://www.deepl.com/',dom:'deepl.com'},
+  {c:'ime',n:'欧路词典',e:'Eudic',d:'词典查询与整句翻译',p:'WM',u:'https://www.eudic.net/',dom:'eudic.net'},
+  {c:'ime',n:'有道词典',e:'Youdao Dictionary',d:'网易出品的词典与翻译',p:'WM',u:'https://www.youdao.com/',dom:'youdao.com'},
+  {c:'ime',n:'沉浸式翻译',e:'Immersive Translate',d:'网页与文档的双语对照翻译',p:'WM',u:'https://immersivetranslate.com/',dom:'immersivetranslate.com'},
+  {c:'ime',n:'Google 翻译',e:'Google Translate',d:'谷歌的在线翻译服务',p:'WM',u:'https://translate.google.com/',dom:'google.com',note:1},
+  {c:'ime',n:'微信输入法',e:'WeChat IME',d:'腾讯微信团队的跨平台输入法',p:'WM',u:'https://z.weixin.qq.com/',dom:'weixin.qq.com'},
+  {c:'ime',n:'QQ 输入法',e:'QQ IME',d:'腾讯出品的输入法',p:'WM',u:'https://shurufa.qq.com/',dom:'qq.com'},
+  {c:'ime',n:'讯飞输入法',e:'iFlytek IME',d:'语音输入见长的国产输入法',p:'WM',u:'https://srf.xunfei.cn/',dom:'xunfei.cn'},
+  {c:'ime',n:'手心输入法',e:'Hand Center IME',d:'无广告、专注输入的国产输入法',p:'W',u:'https://www.xinshurufa.com/',dom:'xinshurufa.com'},
+  {c:'ime',n:'百度翻译',e:'Baidu Translate',d:'百度的在线翻译与桌面工具',p:'WM',u:'https://fanyi.baidu.com/',dom:'baidu.com'},
+  {c:'ime',n:'彩云小译',e:'Caiyun Translate',d:'中英互译与网页对照翻译',p:'WM',u:'https://fanyi.caiyunapp.com/',dom:'caiyunapp.com'},
+  {c:'ime',n:'金山词霸',e:'iCIBA',d:'老牌词典与翻译工具',p:'WM',u:'https://www.iciba.com/',dom:'iciba.com'},
+  {c:'ime',n:'Grammarly',e:'Grammarly',d:'英文写作语法与拼写检查',p:'WM',u:'https://www.grammarly.com/',dom:'grammarly.com'},
+  {c:'ime',n:'Trados',e:'Trados Studio',d:'专业计算机辅助翻译软件',p:'W',u:'https://www.trados.com/',dom:'trados.com'},
+
+  /* ── 下载工具 ── */
+  {c:'dl',n:'IDM 下载器',e:'Internet Download Manager',d:'老牌多线程下载工具',p:'W',u:'https://www.internetdownloadmanager.com/',dom:'internetdownloadmanager.com'},
+  {c:'dl',n:'Free Download Manager',e:'FDM',d:'免费跨平台下载管理器',p:'WML',u:'https://www.freedownloadmanager.org/',dom:'freedownloadmanager.org'},
+  {c:'dl',n:'Motrix',e:'Motrix',d:'开源全能下载工具，支持 BT 与磁力',p:'WML',u:'https://motrix.app/',dom:'motrix.app'},
+  {c:'dl',n:'qBittorrent',e:'qBittorrent',d:'开源无广告 BT 客户端',p:'WML',u:'https://www.qbittorrent.org/',dom:'qbittorrent.org'},
+  {c:'dl',n:'迅雷',e:'Thunder',d:'国内常用的下载与云加速工具',p:'WM',u:'https://www.xunlei.com/',dom:'xunlei.com'},
+  {c:'dl',n:'BitComet',e:'BitComet',d:'老牌 BT 下载客户端',p:'W',u:'https://www.bitcomet.com/',dom:'bitcomet.com'},
+  {c:'dl',n:'aria2',e:'aria2',d:'轻量的命令行多协议下载器',p:'WML',u:'https://aria2.github.io/',dom:'aria2.github.io'},
+  {c:'dl',n:'Downie',e:'Downie',d:'macOS 上的视频下载工具',p:'M',u:'https://software.charliemonroe.net/downie/',dom:'charliemonroe.net'},
+  {c:'dl',n:'NDM 下载器',e:'Neat Download Manager',d:'免费轻量的多线程下载器',p:'WM',u:'https://www.neatdownloadmanager.com/',dom:'neatdownloadmanager.com'},
+  {c:'dl',n:'Xdown',e:'Xdown',d:'支持 BT 与磁力的免费下载器',p:'W',u:'https://xdown.org/',dom:'xdown.org'},
+  {c:'dl',n:'维棠下载',e:'FLVCD',d:'网页视频嗅探下载工具',p:'W',u:'https://www.flvcd.com/',dom:'flvcd.com'},
+  {c:'dl',n:'Transmission',e:'Transmission',d:'开源简洁的 BT 客户端',p:'WML',u:'https://transmissionbt.com/',dom:'transmissionbt.com'},
+  {c:'dl',n:'Deluge',e:'Deluge',d:'开源跨平台 BT 客户端',p:'WML',u:'https://deluge-torrent.org/',dom:'deluge-torrent.org'},
+  {c:'dl',n:'μTorrent',e:'μTorrent',d:'老牌轻量 BT 客户端',p:'WM',u:'https://www.utorrent.com/',dom:'utorrent.com'},
+  {c:'dl',n:'yt-dlp',e:'yt-dlp',d:'开源命令行视频下载器',p:'WML',u:'https://github.com/yt-dlp/yt-dlp',dom:'github.com'},
+
+  /* ── 游戏平台 ── */
+  {c:'game',n:'Steam',e:'Steam',d:'全球最大的 PC 游戏发行平台',p:'WML',u:'https://store.steampowered.com/',dom:'steampowered.com'},
+  {c:'game',n:'Epic 游戏商城',e:'Epic Games Store',d:'每周免费游戏与独占作品',p:'WM',u:'https://store.epicgames.com/',dom:'epicgames.com'},
+  {c:'game',n:'GOG',e:'GOG.com',d:'主打无 DRM 的经典游戏商店',p:'WM',u:'https://www.gog.com/',dom:'gog.com'},
+  {c:'game',n:'战网',e:'Battle.net',d:'暴雪游戏的官方平台',p:'WM',u:'https://www.battle.net/',dom:'battle.net'},
+  {c:'game',n:'Ubisoft Connect',e:'Ubisoft Connect',d:'育碧游戏与成就平台',p:'WM',u:'https://www.ubisoft.com/ubisoft-connect',dom:'ubisoft.com'},
+  {c:'game',n:'EA app',e:'EA app',d:'EA 游戏官方客户端',p:'W',u:'https://www.ea.com/',dom:'ea.com'},
+  {c:'game',n:'Xbox',e:'Xbox App',d:'微软游戏与 Game Pass 入口',p:'W',u:'https://www.xbox.com/',dom:'xbox.com'},
+  {c:'game',n:'WeGame',e:'WeGame',d:'腾讯出品的 PC 游戏平台与商店',p:'W',u:'https://www.wegame.com/',dom:'wegame.com'},
+  {c:'game',n:'Minecraft',e:'Minecraft',d:'我的世界官方启动器与资讯',p:'WML',u:'https://www.minecraft.net/',dom:'minecraft.net'},
+  {c:'game',n:'itch.io',e:'itch.io',d:'独立游戏发行与社区平台',p:'WML',u:'https://itch.io/',dom:'itch.io'},
+  {c:'game',n:'Riot Games',e:'Riot Games',d:'拳头游戏官方平台',p:'W',u:'https://www.riotgames.com/',dom:'riotgames.com'},
+  {c:'game',n:'Humble Bundle',e:'Humble Bundle',d:'游戏慈善包与折扣商店',p:'WM',u:'https://www.humblebundle.com/',dom:'humblebundle.com'},
+  {c:'game',n:'Roblox',e:'Roblox',d:'大型多人在线创作游戏平台',p:'WM',u:'https://www.roblox.com/',dom:'roblox.com'},
+  {c:'game',n:'网易UU加速器',e:'UU Booster',d:'网易游戏网络加速工具',p:'W',u:'https://uu.163.com/',dom:'uu.163.com'},
+  {c:'game',n:'迅游加速器',e:'XunYou',d:'老牌网游加速工具',p:'W',u:'https://www.xunyou.com/',dom:'xunyou.com'},
+  {c:'game',n:'5E对战平台',e:'5EPlay',d:'CS 系列游戏对战平台',p:'W',u:'https://www.5eplay.com/',dom:'5eplay.com'},
+
+  /* ── 效率小工具 ── */
+  {c:'util',n:'f.lux',e:'f.lux',d:'按时间自动调节屏幕色温',p:'WM',u:'https://justgetflux.com/',dom:'justgetflux.com'},
+  {c:'util',n:'Twinkle Tray',e:'Twinkle Tray',d:'Windows 显示器亮度调节',p:'W',u:'https://twinkletray.com/',dom:'twinkletray.com'},
+  {c:'util',n:'uTools',e:'uTools',d:'插件化的效率启动器',p:'WM',u:'https://u.tools/',dom:'u.tools'},
+  {c:'util',n:'Ditto',e:'Ditto',d:'开源剪贴板历史管理',p:'W',u:'https://ditto-cp.sourceforge.io/',dom:'sourceforge.io'},
+  {c:'util',n:'Zotero',e:'Zotero',d:'开源文献管理与引用工具',p:'WML',u:'https://www.zotero.org/',dom:'zotero.org'},
+  {c:'util',n:'Snipaste',e:'Snipaste',d:'截图、贴图与取色工具',p:'WM',u:'https://www.snipaste.com/',dom:'snipaste.com'},
+  {c:'util',n:'Quicker',e:'Quicker',d:'Windows 上的快捷动作工具箱',p:'W',u:'https://getquicker.net/',dom:'getquicker.net'},
+  {c:'util',n:'Alfred',e:'Alfred',d:'macOS 效率启动与自动化工具',p:'M',u:'https://www.alfredapp.com/',dom:'alfredapp.com'},
+  {c:'util',n:'Raycast',e:'Raycast',d:'macOS 快捷启动与扩展平台',p:'M',u:'https://www.raycast.com/',dom:'raycast.com'},
+  {c:'util',n:'ShareX',e:'ShareX',d:'开源强大的截图与录屏',p:'W',u:'https://getsharex.com/',dom:'getsharex.com'},
+  {c:'util',n:'PixPin',e:'PixPin',d:'截图、贴图与长截图工具',p:'WM',u:'https://pixpinapp.com/',dom:'pixpinapp.com'},
+  {c:'util',n:'FastStone Capture',e:'FastStone Capture',d:'经典截图与屏幕录制',p:'W',u:'https://www.faststone.org/',dom:'faststone.org'},
+  {c:'util',n:'ImageGlass',e:'ImageGlass',d:'开源轻量的图片浏览器',p:'W',u:'https://imageglass.org/',dom:'imageglass.org'},
+  {c:'util',n:'XnView',e:'XnView MP',d:'老牌图片浏览与批处理',p:'WML',u:'https://www.xnview.com/',dom:'xnview.com'},
+  {c:'util',n:'IrfanView',e:'IrfanView',d:'极致轻量的经典看图软件',p:'W',u:'https://www.irfanview.com/',dom:'irfanview.com'},
+  {c:'util',n:'Honeyview',e:'Honeyview',d:'Bandisoft 出品的快速看图',p:'W',u:'https://www.bandisoft.com/honeyview/',dom:'bandisoft.com'},
+  {c:'util',n:'滴答清单',e:'TickTick',d:'待办事项与番茄钟',p:'WM',u:'https://www.dida365.com/',dom:'dida365.com'},
+  {c:'util',n:'Microsoft To Do',e:'Microsoft To Do',d:'微软的待办事项清单',p:'WM',u:'https://todo.microsoft.com/',dom:'microsoft.com'},
+  {c:'util',n:'Todoist',e:'Todoist',d:'国际流行的任务管理工具',p:'WM',u:'https://todoist.com/',dom:'todoist.com'},
+  {c:'util',n:'桌面日历',e:'DesktopCal',d:'桌面上的双击日程日历',p:'W',u:'https://www.desktopcal.com/',dom:'desktopcal.com'},
+  {c:'util',n:'Maccy',e:'Maccy',d:'macOS 开源剪贴板管理',p:'M',u:'https://maccy.app/',dom:'maccy.app'},
+  {c:'util',n:'Umi-OCR',e:'Umi-OCR',d:'开源免费的离线 OCR 识别',p:'W',u:'https://github.com/HiroiSora/Umi-OCR',dom:'github.com'},
+  {c:'util',n:'白描',e:'Baimiao',d:'高效的图片转文字与翻译',p:'WM',u:'https://baimiao.uzero.cn/',dom:'uzero.cn'},
+  {c:'util',n:'Bob',e:'Bob',d:'macOS 划词翻译与 OCR 神器',p:'M',u:'https://bobtranslate.com/',dom:'bobtranslate.com'},
+  {c:'util',n:'Anki',e:'Anki',d:'开源记忆卡片学习软件',p:'WML',u:'https://apps.ankiweb.net/',dom:'ankiweb.net'},
+  {c:'util',n:'按键精灵',e:'AnJian',d:'国产鼠标键盘宏与自动化脚本工具',p:'W',u:'https://www.anjian.com/',dom:'anjian.com'}
+];
+
+/* ── 基础工具 ── */
+const PLAT_LABEL = { W:'Win', M:'Mac', L:'Linux' };
+const CAT_MAP = Object.fromEntries(CATS.map(c => [c.key, c]));
+const $ = id => document.getElementById(id);
+const grid = $('grid'), chips = $('chips'), q = $('q');
+const emptyBox = $('empty'), resultInfo = $('resultInfo'), clearBtn = $('clearBtn');
+
+function esc(s){
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function escRe(s){
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+function hashHue(str){
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) % 360;
+  return h;
+}
+function initials(item){
+  const s = item.e.replace(/^(Adobe|Microsoft|Google|Mozilla|Tencent)\s+/i, '').trim();
+  return (s[0] || '?').toUpperCase();
+}
+function searchBlob(item){
+  return [
+    item.n, item.e, item.d, CAT_MAP[item.c].name, item.c, item.dom, item.u,
+    item.p.split('').map(p => PLAT_LABEL[p]).join(' '),
+    item.note ? '受限 需代理' : ''
+  ].join(' ').toLowerCase();
+}
+DATA.forEach(d => { d._blob = searchBlob(d); });
+
+/* ── 状态 ── */
+let activeCat = 'all';
+let tokens = [];
+let query = '';
+
+function buildTokens(){
+  query = q.value.trim();
+  tokens = query.toLowerCase().split(/\s+/).filter(Boolean);
+  tokens.sort((a, b) => b.length - a.length);
+}
+
+function highlight(text){
+  if (!tokens.length) return esc(text);
+  const re = new RegExp('(' + tokens.map(escRe).join('|') + ')', 'gi');
+  return text.split(re).map((part, i) =>
+    i % 2 ? '<mark>' + esc(part) + '</mark>' : esc(part)
+  ).join('');
+}
+
+function scoreOf(item){
+  if (!tokens.length) return 0;
+  const blob = item._blob;
+  for (const t of tokens) if (!blob.includes(t)) return -1;
+  let score = 0;
+  const name = item.n.toLowerCase(), en = item.e.toLowerCase(), dom = item.dom.toLowerCase();
+  for (const t of tokens){
+    if (name.startsWith(t)) score += 6;
+    else if (name.includes(t)) score += 4;
+    else if (en.startsWith(t)) score += 5;
+    else if (en.includes(t)) score += 3;
+    else if (dom.includes(t)) score += 2;
+    else score += 1;
+  }
+  return score;
+}
+
+function cardHTML(item, hl){
+  const cat = CAT_MAP[item.c];
+  const hue = hashHue(item.e);
+  const plats = item.p.split('').map(p => '<span class="plat">' + PLAT_LABEL[p] + '</span>').join('');
+  const note = item.note
+    ? '<span class="note" title="该官网在中国大陆访问可能需要网络工具，链接仍为官方站点">⚠ 受限</span>'
+    : '';
+  return '<a class="card" href="' + esc(item.u) + '" target="_blank" rel="noopener noreferrer" '
+    + 'aria-label="打开 ' + esc(item.n) + ' 官网（新标签页）">'
+    +   '<div class="card-top">'
+    +     '<span class="mono-mark" style="--h:' + hue + '">' + esc(initials(item)) + '</span>'
+    +     '<div class="names"><h4>' + (hl ? highlight(item.n) : esc(item.n)) + '</h4>'
+    +       '<span class="en">' + (hl ? highlight(item.e) : esc(item.e)) + '</span></div>'
+    +     '<span class="arrow" aria-hidden="true">↗</span>'
+    +   '</div>'
+    +   '<p class="desc">' + (hl ? highlight(item.d) : esc(item.d)) + '</p>'
+    +   '<div class="card-foot">' + plats + note
+    +     '<span class="dom" title="' + esc(item.u) + '">' + (hl ? highlight(item.dom) : esc(item.dom)) + '</span>'
+    +   '</div>'
+    + '</a>';
+}
+
+/* ── 渲染 ── */
+function render(){
+  buildTokens();
+  const hl = tokens.length > 0;
+  let total = 0;
+  let html = '';
+
+  /* 先按关键词统计各分类命中数（不受当前分类限制），再按分类过滤 */
+  const matched = {};
+  let matchedAll = 0;
+  for (const cat of CATS){
+    matched[cat.key] = DATA.filter(item => item.c === cat.key && scoreOf(item) >= 0).length;
+    matchedAll += matched[cat.key];
+  }
+
+  for (const cat of CATS){
+    if (activeCat !== 'all' && activeCat !== cat.key) continue;
+    const list = DATA.filter(item => item.c === cat.key)
+      .map(item => ({ item, score: scoreOf(item) }))
+      .filter(x => x.score >= 0)
+      .sort((a, b) => b.score - a.score);
+    if (!list.length) continue;
+
+    total += list.length;
+    html += '<section class="grid-section">'
+      +   '<div class="sec-head"><span class="emoji" aria-hidden="true">' + cat.icon + '</span>'
+      +   '<h3>' + cat.name + '</h3><div class="line"></div>'
+      +   '<span class="num">' + list.length + '</span></div>'
+      +   '<div class="grid">' + list.map(x => cardHTML(x.item, hl)).join('') + '</div>'
+      + '</section>';
+  }
+
+  grid.innerHTML = total ? html : '';
+  emptyBox.classList.toggle('show', total === 0);
+
+  resultInfo.textContent = (tokens.length || activeCat !== 'all')
+    ? '匹配 ' + total + ' 款 / 共 ' + DATA.length + ' 款'
+    : '共 ' + DATA.length + ' 款软件';
+  clearBtn.hidden = !tokens.length;
+
+  updateSide(matched, matchedAll);
+}
+
+/* 侧栏计数与选中态 */
+function updateSide(matched, matchedAll){
+  const allCount = tokens.length ? matchedAll : DATA.length;
+  chips.querySelectorAll('.side-item').forEach(btn => {
+    const k = btn.dataset.cat;
+    const n = k === 'all' ? allCount : matched[k];
+    const cnt = btn.querySelector('.cnt');
+    if (cnt) cnt.textContent = n;
+    btn.classList.toggle('is-zero', tokens.length > 0 && k !== 'all' && n === 0);
+    btn.setAttribute('aria-current', k === activeCat ? 'true' : 'false');
+  });
+}
+
+/* ── 左侧分类导航 ── */
+function initNav(){
+  const counts = {};
+  DATA.forEach(d => { counts[d.c] = (counts[d.c] || 0) + 1; });
+
+  const item = (key, icon, name, n, current) =>
+    '<button class="side-item" type="button" data-cat="' + key + '" aria-current="' + current + '">'
+    + '<span class="ico" aria-hidden="true">' + icon + '</span>'
+    + '<span class="label">' + name + '</span>'
+    + '<span class="cnt">' + n + '</span></button>';
+
+  chips.innerHTML = item('all', '▦', '全部', DATA.length, 'true')
+    + CATS.map(c => item(c.key, c.icon, c.name, counts[c.key] || 0, 'false')).join('');
+
+  const foot = $('sideFoot');
+  if (foot) foot.textContent = CATS.length + ' 个分类 · ' + DATA.length + ' 款';
+
+  chips.addEventListener('click', e => {
+    const btn = e.target.closest('.side-item');
+    if (!btn) return;
+    activeCat = btn.dataset.cat;
+    render();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* ── 搜索交互 ── */
+q.addEventListener('input', render);
+q.addEventListener('keydown', e => {
+  if (e.key === 'Escape'){
+    e.preventDefault();
+    resetAll();
+    q.blur();
+  } else if (e.key === 'Enter'){
+    const first = grid.querySelector('.card');
+    if (first) window.open(first.getAttribute('href'), '_blank', 'noopener,noreferrer');
+  }
+});
+
+clearBtn.addEventListener('click', () => { q.value = ''; render(); q.focus(); });
+$('resetBtn').addEventListener('click', () => { resetAll(); q.focus(); });
+
+function resetAll(){
+  q.value = '';
+  activeCat = 'all';
+  render();
+}
+
+window.addEventListener('keydown', e => {
+  const k = e.key.toLowerCase();
+  if ((e.ctrlKey || e.metaKey) && k === 'k'){
+    e.preventDefault();
+    q.focus();
+    q.select();
+  } else if (e.key === '/' && document.activeElement !== q){
+    e.preventDefault();
+    q.focus();
+  }
+});
+
+if (/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)){
+  $('kbdHint').textContent = '⌘ K';
+}
+
+/* ── 主题：auto → light → dark ── */
+const THEME_KEY = 'sw-nav-theme';
+const ORDER = ['auto', 'light', 'dark'];
+const ICONS = {
+  auto:'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="8.2"></circle><path d="M12 3.8v16.4"></path></svg>',
+  light:'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.6v2M12 19.4v2M4.4 12h-2M21.6 12h-2M6.3 6.3 4.9 4.9M19.1 19.1l-1.4-1.4M6.3 17.7 4.9 19.1M19.1 4.9l-1.4 1.4"></path></svg>',
+  dark:'<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 13.4A9 9 0 1 1 10.6 3a7 7 0 0 0 10.4 10.4z"></path></svg>'
+};
+const themeBtn = $('themeBtn');
+
+function applyTheme(mode){
+  document.documentElement.setAttribute('data-theme', mode);
+  themeBtn.innerHTML = ICONS[mode];
+  themeBtn.title = mode === 'auto' ? '主题：跟随系统（点击切换）' : mode === 'light' ? '主题：浅色（点击切换）' : '主题：深色（点击切换）';
+  try { localStorage.setItem(THEME_KEY, mode); } catch(e){}
+}
+let themeMode = 'auto';
+try { themeMode = localStorage.getItem(THEME_KEY) || 'auto'; } catch(e){}
+if (!ORDER.includes(themeMode)) themeMode = 'auto';
+applyTheme(themeMode);
+
+themeBtn.addEventListener('click', () => {
+  themeMode = ORDER[(ORDER.indexOf(themeMode) + 1) % ORDER.length];
+  applyTheme(themeMode);
+});
+
+/* ── 启动 ── */
+$('heroCount').textContent = DATA.length;
+initNav();
+render();
+</script>
+</body>
+</html>
+
+
